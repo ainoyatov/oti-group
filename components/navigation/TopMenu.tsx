@@ -11,7 +11,7 @@ export default function TopMenu() {
             </a>
 
             <div className="flex flex-row">
-                <div className="flex h-[100px] max-sm:hidden">
+                <div className="flex h-[100px] max-lg:hidden">
                     <ul className="flex h-[100px] justify-center">
                         {NavLinks.map((links) => (
                             <li key={links.label} className="mt-4 p-2 text-xl  text-left">
@@ -26,6 +26,12 @@ export default function TopMenu() {
                     </ul>
                 </div>
             </div>
+
+            {/* <div className="flex">
+                <a href="tel:+16822677741" className="flex items-center p-4 text-white font-semibold bg-blue-500">
+                    682-267-7741
+                </a>
+            </div> */}
             
         </div>
     )
