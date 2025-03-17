@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TopMenu() {
 
     return (
-        <div className='flex min-h-auto flex-row justify-between  sm:px-6 sm:mt-8'>
+        <div className='flex min-h-auto flex-row justify-between  sm:px-6 sm:m-4'>
             <a className='flex h-[100px] ' href='/'>
                <Image src="/top-menu-logo.png" alt="main logo" width={150} height={1} className=''/> 
             </a>
@@ -27,7 +27,7 @@ export default function TopMenu() {
                 </div>
             </div>
 
-            <div className="flex items-center text-2xl p-4 bg-blue-500 text-white max-lg:hidden">
+            <div className="flex items-center text-2xl px-4 m-4 bg-blue-500 text-white max-lg:hidden">
                 682-267-7741
             </div>
             
