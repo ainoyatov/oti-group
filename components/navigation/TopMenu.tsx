@@ -1,11 +1,12 @@
 import { NavLinks } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
+import {Icon} from '@iconify/react'
 
 export default function TopMenu() {
 
     return (
-        <div className='flex min-h-auto flex-row justify-between  sm:px-6 sm:m-4'>
+        <div className='flex min-h-auto flex-row justify-between sm:m-2'>
             <a className='flex h-[100px] ' href='/'>
                <Image src="/top-menu-logo.png" alt="main logo" width={150} height={1} className=''/> 
             </a>
@@ -17,7 +18,7 @@ export default function TopMenu() {
                             <li key={links.label} className="p-2 text-left">
                                 <Link
                                     href={links.href}
-                                    className="text-2xl"
+                                    className="text-xl"
                                 >
                                     {links.label}
                                 </Link>
@@ -27,8 +28,11 @@ export default function TopMenu() {
                 </div>
             </div>
 
-            <div className="flex items-center text-2xl px-4 m-4 bg-blue-500 text-white max-lg:hidden">
-                682-267-7741
+            <div className="flex flex-row items-center text-2xl px-4 m-6 bg-blue-500 text-white max-lg:hidden">
+                <div className="mr-4">
+                    <Icon icon="carbon:phone-filled" width="32" height="32" />
+                </div> 
+                <a href="tel:+16822677741">682-267-7741</a>
             </div>
             
         </div>
