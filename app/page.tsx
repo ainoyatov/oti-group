@@ -2,29 +2,45 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex relative h-screen bg-[url('/main-home.jpg')] bg-cover bg-center">
+    <div className="flex relative h-[60vh] bg-[url('/main-home.jpg')] bg-cover bg-center nest-hub-fix nest-hub-max-fix">
       
-      <div className="flex flex-col w-full md:flex-row bg-gray-900/50">
+      <div className="flex flex-col w-full md:flex-row bg-gray-900/50 sm:pt-4 ">
         
         {/* Left Column: Text Content */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-8 md:p-10 lg:p-12">
-          <div className="flex flex-col text-white text-5xl lg:text-6xl xl:text-7xl font-bold">
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-2 mt-6 md:pl-4 lg:pl-6 ">
+          <div className="flex flex-col text-white text-5xl lg:text-[56px] xl:text-7xl font-bold">
             <h2>Sell Your House</h2>
             <h2>Fast For Cash!</h2>
           </div>
-          <ul className="mt-6 space-y-3 text-xl lg:text-3xl max-w-lg font-medium">
+          <ul className="mt-6 m-2 space-y-3 text-xl lg:text-3xl max-w-lg font-medium">
             <li>✔ Top Dollar Cash Offer</li>
             <li>✔ Close Within 10 Days</li>
             <li>✔ Sell In Any Condition</li>
           </ul>
-          <p className="mt-6 text-lg lg:text-2xl max-w-sm lg:max-w-lg">
+          <p className="mt-6 m-2 text-lg lg:text-2xl max-w-sm lg:max-w-lg">
             Selling your home doesn’t have to be hard. No realtors, no showings, no renovations—just a simple way to sell your home hassle-free.
           </p>
+          <div>
+            <Image 
+              alt="white arrow"
+              src="/white_arrow.png"
+              width={300}
+              height={1}
+              className="hidden sm:block md:px-12 lg:mx-16 pt-6"
+            />
+            <Image 
+              alt="white arrow"
+              src="/white_arrow_small.png"
+              width={50}
+              height={1}
+              className="block sm:hidden"
+            />
+          </div>
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="flex-1 flex justify-center items-center p-8 lg:p-12">
-          <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70 ">
+        <div className="flex-1 flex justify-center items-center p-2 md:pr-6 py-2 lg:pt-12">
+          <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70 nest-hub-fix">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               Get Free No-Obligation Offer Now!
             </h2>
@@ -43,7 +59,8 @@ export default function Home() {
               </button>
             </form>
             <p className="text-xs mt-4 text-gray-800 text-center">
-              By submitting this request, you agree to our Terms & Privacy Policy.
+              By submitting this request for information, I hereby agree to <a href="https://otinvestmentgroup.com/privacy-policy"><span className="font-bold">Terms Of Use and Privacy Policy </span></a>
+              and consent to receive messages or calls via email, phone and or SMS. Standard Msg and Data Rates Apply.
             </p>
           </div>
         </div>
@@ -52,19 +69,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <div className="relative  h-screen bg-[url('/main-home.jpg')] bg-cover bg-center">
-//       <div className="absolute inset-0 flex items-center justify-center bg-gray-900/30">
-//         <div className="flex flex-col text-white text-7xl font-bold">
-//           <h2>Sell Your House</h2>
-//           <h2>Fast For Cash!</h2>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
