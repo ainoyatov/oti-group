@@ -1,5 +1,6 @@
 import FirstDiv from "@/components/main-page/FirstDiv";
 import SecondDiv from "@/components/main-page/SecondDiv";
+import ThirdDiv from "@/components/main-page/ThirdDiv";
 
 export default function Home() {
 
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <FirstDiv />
       <SecondDiv />
+      <ThirdDiv />
     </div>
   )
 }

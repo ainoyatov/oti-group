@@ -39,6 +39,13 @@ const SecondDiv = () => {
 
         <ThreeEasySteps />
 
+        <div className="flex flex-row items-center text-2xl p-2  bg-orange-400 text-white max-lg:hidden">
+          <div className="mr-4">
+              <Icon icon="carbon:phone-filled" width="32" height="32" />
+          </div> 
+          <a href="tel:+16822677741">Call Me Today: 682-267-7741</a>
+        </div>
+
     </div>
   )
 }
