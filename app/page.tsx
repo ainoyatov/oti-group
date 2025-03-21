@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex relative h-[60vh] bg-[url('/main-home.jpg')] bg-cover bg-center nest-hub-fix nest-hub-max-fix">
+    <div className="flex relative  bg-[url('/main-home.jpg')] bg-cover bg-center">
       
-      <div className="flex flex-col w-full md:flex-row bg-gray-900/50 sm:pt-4 ">
+      <div className="flex flex-col w-full sm:flex-row bg-gray-900/50 py-4">
         
         {/* Left Column: Text Content */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-2 mt-6 md:pl-4 lg:pl-6 ">
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-2 sm:p-4">
           <div className="flex flex-col text-white text-5xl lg:text-[56px] xl:text-7xl font-bold">
             <h2>Sell Your House</h2>
             <h2>Fast For Cash!</h2>
@@ -26,7 +26,7 @@ export default function Home() {
               src="/white_arrow.png"
               width={300}
               height={1}
-              className="hidden sm:block md:px-12 lg:mx-16 pt-6"
+              className="hidden sm:block sm:px-12 lg:mx-16 pt-6"
             />
             <Image 
               alt="white arrow"
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="flex-1 flex justify-center items-center p-2 md:pr-6 py-2 lg:pt-12">
+        <div className="flex-1 flex justify-center items-center p-4 ">
           <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70 nest-hub-fix">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               Get Free No-Obligation Offer Now!

@@ -6,7 +6,7 @@ import {Icon} from '@iconify/react'
 export default function TopMenu() {
 
     return (
-        <div className='flex min-h-auto flex-row justify-between sm:m-2'>
+        <div className='flex min-h-auto flex-row justify-between p-2'>
             <a className='flex h-[100px] ' href='/'>
                <Image src="/top-menu-logo.png" alt="main logo" width={150} height={1} className=''/> 
             </a>
