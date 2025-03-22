@@ -2,10 +2,10 @@ import { Icon } from '@iconify/react';
 
 const ThirdDiv = () => {
   return (
-    <div className="flex relative my-12 bg-[url('/third-div-home.jpg')] bg-cover bg-center">
+    <div className="flex relative my-12 bg-[url('/third-div-bg.jpg')] bg-cover bg-center">
       <div className="flex flex-col w-full justify-center items-center bg-gray-900/70">
         {/* Headline */}
-        <div className="flex flex-col items-center text-3xl lg:text-5xl text-white mt-8 mb-2">
+        <div className="flex flex-col items-center text-4xl md:text-5xl text-white mt-16 mb-2">
           <div>We Provide Solutions</div>
           <div>For All Situations</div>
         </div>
@@ -32,7 +32,7 @@ const ThirdDiv = () => {
                 active:border-gray-300 active:bg-gray-500 active:dark:border-neutral-700 active:dark:bg-neutral-800/30"
             >
               <div className="flex flex-row space-x-2 py-2">
-                <div className="flex items-center justify-center h-8 w-8 rounded-full bg-orange-400">
+                <div className="flex items-center justify-center h-8 w-8 rounded-full bg-[#F5B429]">
                   <Icon icon="game-icons:check-mark" color="white" />
                 </div>
                 <h2 className="text-xl font-semibold text-white">{item.title}</h2>
@@ -53,7 +53,7 @@ const ThirdDiv = () => {
           <a href="tel:+16822677741">
             <button className="flex flex-row p-2 px-4 gap-2 text-xl cursor-pointer transition-transform transform 
               hover:scale-125 active:scale-125 
-              bg-orange-400 text-white hover:bg-orange-500 active:bg-orange-500 rounded-md">
+              bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md">
               <Icon icon="fa6-solid:sack-dollar" width={24} height={24} />
               <span>Free Cash Offer</span>
             </button>

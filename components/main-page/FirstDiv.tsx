@@ -6,7 +6,6 @@ const FirstDiv = () => {
     <div className="flex relative  bg-[url('/main-home.jpg')] bg-cover bg-center">
         <div className="flex flex-col w-full sm:flex-row items-center justify-center bg-gray-900/50 py-4">
             <div className="flex flex-col sm:flex-row w-full max-w-screen-xl items-center justify-center gap-4 px-4">
-                
                 {/* Left Column: Text Content */}
                 <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-2 sm:p-4">
                     <div className="flex flex-col text-white text-5xl lg:text-[56px] xl:text-7xl font-bold">

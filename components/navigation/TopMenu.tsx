@@ -28,7 +28,7 @@ export default function TopMenu() {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center text-2xl px-4 m-6 bg-blue-500 text-white max-lg:hidden">
+            <div className="flex flex-row items-center text-2xl px-4 m-6 bg-[#F5B429] text-white max-lg:hidden">
                 <div className="mr-4">
                     <Icon icon="carbon:phone-filled" width="32" height="32" />
                 </div> 
