@@ -31,8 +31,8 @@ export default function TopMenu() {
             
             <a href="tel:+16822677741">
                 <button className="flex flex-row p-2 px-4 gap-2 m-6 text-2xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125  bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md max-lg:hidden">
-                    <Icon icon="carbon:phone-filled" width={24} height={24} />
-                    <span>Free Cash Offer</span>
+                    <Icon icon="mingcute:phone-call-fill" width={24} height={24} />
+                    <span>682-267-7741</span>
                 </button>
             </a>
             

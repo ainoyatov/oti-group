@@ -42,7 +42,7 @@ const SecondDiv = () => {
 
           <a href="tel:+16822677741">
             <button className="flex flex-row p-2 mt-8 px-4 gap-2 text-2xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125  bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md">
-              <Icon icon="carbon:phone-filled" width={24} height={24} />
+              <Icon icon="mingcute:phone-call-fill" width={24} height={24} />
               <span>Call Me Today: 682-267-7741</span>
             </button>
           </a>
