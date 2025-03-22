@@ -1,5 +1,6 @@
 import Image from "next/image"
 import {Icon} from '@iconify/react'
+import ThreeReasons from "./ThreeReasons"
 
 const FourthDiv = () => {
   return (
@@ -31,6 +32,8 @@ const FourthDiv = () => {
         <div className="text-center leading-loose lg:max-w-[1000px] px-2">
             We are committed to providing top-tier service to every customer. You can trust OT Investment Group to give you the BEST offer to purchase your house.
         </div>
+
+        <ThreeReasons />
         
         
     </div>
