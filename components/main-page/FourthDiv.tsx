@@ -1,6 +1,7 @@
 import Image from "next/image"
 import {Icon} from '@iconify/react'
 import ThreeReasons from "./ThreeReasons"
+import BenefitsSection from "./BenefitsSection"
 
 const FourthDiv = () => {
   return (
@@ -34,7 +35,8 @@ const FourthDiv = () => {
         </div>
 
         <ThreeReasons />
-        
+
+        <BenefitsSection />
         
     </div>
   )

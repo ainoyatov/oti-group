@@ -3,17 +3,17 @@ import {Icon} from '@iconify/react'
 export default function ThreeReasons() {
     const reasons = [
         {
-            icon: "fa:step-forward",
+            icon: "ri:skip-forward-fill",
             title: "FAST CASH PAYMENT",
             text: "Need to sell your house fast? We can close in as little as 14 to 30 days — get your cash offer today!",
         },
         {
-            icon: "fa:step-forward",
+            icon: "mage:users-fill",
             title: "U.S.-based team",
             text: "With a team based in the USA, we can offer a fair and honest assessment of your house, ensuring that you receive the highest offer for your home.",
         },
         {   
-            icon: "fa:step-forward",
+            icon: "carbon:time",
             title: "WE DELIVER ON TIME",
             text: "Unlike our competitors, we don’t need to rely on finding a suitable buyer — so we deliver on our promise of providing funds on the agreed date.",
         },
@@ -28,7 +28,7 @@ export default function ThreeReasons() {
                 >   
                     {/* Icon */}
                     <div className="flex items-center justify-center w-[70px] h-[70px] rounded-full border-4 border-[#F5B429] mb-4">
-                        <Icon icon={reason.icon} width={32} height={32} color="#F5B429" />
+                        <Icon icon={reason.icon} width={36} height={36} color="#F5B429" />
                     </div>
 
                     {/* Title */}
