@@ -51,9 +51,7 @@ const ThirdDiv = () => {
           </div>
 
           <a href="tel:+16822677741">
-            <button className="flex flex-row p-2 px-4 gap-2 text-xl cursor-pointer transition-transform transform 
-              hover:scale-125 active:scale-125 
-              bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md">
+            <button className="flex flex-row p-2 px-4 gap-2 text-xl cursor-pointer transition-transform transform hover:scale-125 active:scale-125 bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md">
               <Icon icon="fa6-solid:sack-dollar" width={24} height={24} />
               <span>Free Cash Offer</span>
             </button>

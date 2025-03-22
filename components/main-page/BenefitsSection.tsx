@@ -82,10 +82,10 @@ export default function BenefitsSection() {
           <div
             key={idx}
             className={`flex flex-row space-x-4 py-4 items-start ${
-              idx !== leftItems.length - 1 ? 'border-b-2 border-green-500' : ''
+              idx !== leftItems.length - 1 ? 'border-b-2 border-green-500/50' : ''
             }`}
           >
-            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500 text-white flex-shrink-0">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/70 text-white flex-shrink-0">
               <Icon icon="game-icons:check-mark" width={12} height={12} color="white" />
             </div>
             <p className="text-base w-[250px]">{text}</p>
@@ -99,10 +99,10 @@ export default function BenefitsSection() {
           <div
             key={idx}
             className={`flex flex-row space-x-4 py-4 items-start ${
-              idx !== rightItems.length - 1 ? 'border-b-2 border-red-500' : ''
+              idx !== rightItems.length - 1 ? 'border-b-2 border-red-500/50' : ''
             }`}
           >
-            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-500 text-white flex-shrink-0">
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-500/70 text-white flex-shrink-0">
               <Icon icon="dashicons:no-alt" width={12} height={12} color="white" />
             </div>
             <p className="text-base w-[250px]">{text}</p>
