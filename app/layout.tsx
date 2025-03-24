@@ -14,9 +14,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const {SITE_NAME} = process.env
+
+const baseUrl = "https://otinvestmentgroup.com"
+
 export const metadata: Metadata = {
-  title: "OT Investment Group",
-  description: "Buy Sell Homes"
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: SITE_NAME!,
+    template: `%s | ${SITE_NAME}`
+  },
+  description: "Buy Sell Homes",
+  robots: {
+    follow: true,
+    index: true
+  }
+
 };
 
 export default function RootLayout({
