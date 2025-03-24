@@ -1,4 +1,13 @@
-import React from 'react'
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Directions',
+  description: '',
+  robots: {
+    follow: true,
+    index: true
+  },
+}
 
 const Directions = () => {
   return (
