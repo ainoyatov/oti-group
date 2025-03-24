@@ -17,7 +17,7 @@ export const FooterLinks = [
     {
         title: "CONTACT",
         links: [
-            {href:"/about-us", label:"About us"},
+            {href:"/directions", label:"Directions"},
             {href:"/appointment", label:"Appointment"},
             {href:"/contact-us", label:"Contact us"},
         ]
