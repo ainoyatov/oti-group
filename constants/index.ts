@@ -29,9 +29,10 @@ export const SocialLinks = [
     {
         title: "SOCIALS",
         links: [
-            {href:"", label:"Instagram"},
-            {href:"", label:"Google"},
-            {href:"", label:"Facebook"},
+            {href:"https://www.instagram.com/vincechimoga?igsh=MTJ4c3hxcnZjb2VleA%3D%3D&utm_source=qr", label:"Instagram"},
+            {href:"https://www.tiktok.com/@vincechimoga?_t=ZP-8uwD6xBPaT0&_r=1", label:"TikTok"},
+            {href:"https://www.facebook.com/share/164LWqgT27/?mibextid=wwXIfr", label:"Facebook"},
+            {href:"https://youtube.com/@vincechimoga?si=j-81CEQuDel1rvHk", label:"YouTube"}
         ]
     }
 ]
