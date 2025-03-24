@@ -88,7 +88,7 @@ export default function BenefitsSection() {
             <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/70 text-white flex-shrink-0">
               <Icon icon="game-icons:check-mark" width={12} height={12} color="white" />
             </div>
-            <p className="text-base w-[250px]">{text}</p>
+            <p className="text-base w-[250px] dark:text-gray-500">{text}</p>
           </div>
         ))}
       </div>
@@ -105,7 +105,7 @@ export default function BenefitsSection() {
             <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-500/70 text-white flex-shrink-0">
               <Icon icon="dashicons:no-alt" width={12} height={12} color="white" />
             </div>
-            <p className="text-base w-[250px]">{text}</p>
+            <p className="text-base w-[250px] dark:text-gray-500">{text}</p>
           </div>
         ))}
       </div>

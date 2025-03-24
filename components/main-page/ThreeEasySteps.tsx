@@ -36,7 +36,7 @@ export default function ThreeEasySteps() {
           />
 
           {/* Title */}
-          <h3 className="text-xl font-semibold">{card.title}</h3>
+          <h3 className="text-xl font-semibold dark:text-gray-800">{card.title}</h3>
 
           {/* Text */}
           <p className="text-gray-600 mt-2">{card.text}</p>
