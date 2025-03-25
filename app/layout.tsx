@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: SITE_NAME!,
     template: `%s | ${SITE_NAME}`
   },
-  description: "Buy Sell Homes",
+  description: "Buy Sell Homes, Sell my house cash, Need to sell fast, Need help with mortgage, How to sell my house fast, What is the fastest I can sell my house, How soon can the bank take my home",
   robots: {
     follow: true,
     index: true
