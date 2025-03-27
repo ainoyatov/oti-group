@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="flex flex-col justified-start items-start gap-2 cursor-pointer">
                     <a href="/">
                         <Image 
-                            src='/ot-logo.png'
+                            src='/dark-ot-logo.png'
                             alt="logo"
                             width={150}
                             height={35}
