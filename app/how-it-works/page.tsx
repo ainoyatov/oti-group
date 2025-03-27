@@ -18,12 +18,13 @@ const HowItWorks = () => {
           {/*Left Column */}
           <div className="flex flex-col">
             
-            <div>
+            <div className="">
               <Image 
                 alt="An image of animated girl wanting to ask questions"
                 src="/asking-question.svg"
                 width={1000}
                 height={1}
+                className="dark:invert"
               />
             </div>
           </div>
@@ -34,6 +35,7 @@ const HowItWorks = () => {
               src="/how-it-works.png"
               width={800}
               height={1}
+              className="dark:invert"
             />
           </div>
         </div>
@@ -42,16 +44,3 @@ const HowItWorks = () => {
 }
 
 export default HowItWorks
-
-
-
-{/* <div className="flex relative bg-[url('/asking-question.svg')] bg-cover bg-center">
-<div className="flex flex-col w-full items-center justify-center">
-  <div className="text-5xl text-[#F5B429]">
-    How It Works?
-  </div>
-  <div className="text-center max-w-[300px]">
-    Join thousands of homeowners who have experienced our simple and easy to sell model.
-  </div>
-</div>
-</div> */}
