@@ -8,7 +8,23 @@ export default function TopMenu() {
     return (
         <div className='flex min-h-auto flex-wrap justify-between p-6 gap-5 sm:px-16'>
             <a className='flex h-[100px] ' href='/'>
-               <Image src="/ot-logo.png" alt="main logo" width={150} height={1} className=''/> 
+               {/* <Image src="/dark_logo.svg" alt="main logo" width={150} height={1} className=''/>  */}
+               <>
+                    <Image
+                        src="/light_mode_logo.svg" // light mode logo
+                        alt="main logo"
+                        width={150}
+                        height={1}
+                        className="block dark:hidden"
+                    />
+                    <Image
+                        src="/dark_mode_logo.svg" // dark mode logo
+                        alt="main logo dark"
+                        width={150}
+                        height={1}
+                        className="hidden dark:block"
+                    />
+                </>
             </a>
 
             <div className="flex flex-row">
@@ -39,3 +55,6 @@ export default function TopMenu() {
         </div>
     )
 }
+
+
+

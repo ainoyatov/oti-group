@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="flex flex-col justified-start items-start gap-2 cursor-pointer">
                     <a href="/">
                         <Image 
-                            src='/dark-ot-logo.png'
+                            src='/dark_mode_logo.svg'
                             alt="logo"
                             width={150}
                             height={35}
@@ -21,11 +21,9 @@ const Footer = () => {
                             priority
                         />
                     </a>
-                    <div className="text-base text-[#F5B429]">
-                        OT Investment Group {tosYear}
-                    </div>
+                    
                     <div className="text-white">
-                        All rights reserved &copy;
+                        All rights reserved &copy; {tosYear}
                     </div>
                 </div>
             
