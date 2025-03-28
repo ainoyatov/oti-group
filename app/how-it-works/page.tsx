@@ -1,3 +1,4 @@
+import ContactForm from "@/components/forms/ContactForm"
 import { Metadata } from "next"
 import Image from "next/image"
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 const HowItWorks = () => {
   return (
     <div>
-        <div className="text-4xl md:text-5xl font-bold text-center pb-8">How It Works?</div>
+        <div className="flex text-4xl md:text-5xl font-bold justify-center pb-8">How It Works?</div>
         <div className="flex flex-wrap md:flex-nowrap space-y-16 items-center justify-center p-2">
           {/*Left Column */}
           <div className="flex flex-col">
@@ -38,6 +39,9 @@ const HowItWorks = () => {
               className="dark:invert"
             />
           </div>
+        </div>
+        <div className="flex justify-center py-6 md:py-16">
+          <ContactForm />
         </div>
     </div>
   )
