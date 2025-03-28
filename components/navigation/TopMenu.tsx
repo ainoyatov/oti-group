@@ -7,18 +7,17 @@ export default function TopMenu() {
 
     return (
         <div className='flex min-h-auto flex-wrap justify-between p-6 gap-5 sm:px-16'>
-            <a className='flex h-[100px] ' href='/'>
-               {/* <Image src="/dark_logo.svg" alt="main logo" width={150} height={1} className=''/>  */}
+            <a className='flex h-[150px] ' href='/'>
                <>
                     <Image
-                        src="/light_mode_logo.svg" // light mode logo
+                        src="/ot_investment_light_mode.svg"
                         alt="main logo"
                         width={150}
                         height={1}
                         className="block dark:hidden"
                     />
                     <Image
-                        src="/dark_mode_logo.svg" // dark mode logo
+                        src="/ot_investment_dark_mode.svg"
                         alt="main logo dark"
                         width={150}
                         height={1}
@@ -28,8 +27,8 @@ export default function TopMenu() {
             </a>
 
             <div className="flex flex-row">
-                <div className="flex h-[100px] max-lg:hidden">
-                    <ul className="flex h-[100px] items-center">
+                <div className="flex h-[150px] max-lg:hidden">
+                    <ul className="flex h-[150px] items-center">
                         {NavLinks.map((links) => (
                             <li key={links.label} className="p-2 text-left">
                                 <Link
@@ -45,12 +44,14 @@ export default function TopMenu() {
             </div>
 
             
-            <a href="tel:+16822677741">
-                <button className="flex flex-row p-2 px-4 gap-2 m-6 text-2xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125  bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md max-lg:hidden">
-                    <Icon icon="mingcute:phone-call-fill" width={24} height={24} />
-                    <span>682-267-7741</span>
-                </button>
-            </a>
+            <div className="flex items-center p-6">
+                <a href="tel:+16822677741">
+                    <button className="flex flex-row p-2 px-4 gap-2 text-2xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125  bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md max-lg:hidden">
+                        <Icon icon="mingcute:phone-call-fill" width={24} height={24} />
+                        <span>682-267-7741</span>
+                    </button>
+                </a>
+            </div>
             
         </div>
     )

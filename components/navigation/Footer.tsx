@@ -8,12 +8,12 @@ const Footer = () => {
     const tosYear = new Date().getFullYear()
     
     return (
-        <footer className="flex relative border-t border-gray-100 bg-[url('/footer-bg-2.jpg')] bg-cover bg-center">
+        <footer className="flex relative border-t border-gray-100 bg-[url('/footer-bg.jpg')] bg-cover bg-center">
             <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10 bg-gray-900/80 w-full">
                 <div className="flex flex-col justified-start items-start gap-2 cursor-pointer">
                     <a href="/">
                         <Image 
-                            src='/dark_mode_logo.svg'
+                            src='/ot_investment_dark_mode.svg'
                             alt="logo"
                             width={150}
                             height={35}

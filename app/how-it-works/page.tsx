@@ -33,7 +33,7 @@ const HowItWorks = () => {
           <div className="md:pr-8">
             <Image 
               alt="An image showing step-by-step how it works to sell your house with the company"
-              src="/how-it-works.png"
+              src="/how_it_works.svg"
               width={800}
               height={1}
               className="dark:invert"

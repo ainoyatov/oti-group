@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import CalendlyFormBooking from "@/components/forms/CalendlyForm"
 
 export const metadata: Metadata = {
   title: 'Appointment',
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div>Appointment</div>
+    <div>
+      <CalendlyFormBooking />
+    </div>
   )
 }
 
