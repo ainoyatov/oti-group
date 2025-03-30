@@ -77,7 +77,7 @@ export default function BenefitsSection() {
     <div className="flex flex-col p-4 md:flex-row md:justify-center gap-4 xl:gap-8 py-8">
       
       {/* eft Column */}
-      <div className="flex flex-col text-lg md:text-lg md:font-thin p-6 bg-blue-200 rounded-lg shadow-md w-full max-w-md">
+      <div className="flex flex-col text-lg md:text-lg md:font-thin p-6 rounded-lg shadow-2xl w-full max-w-md">
         {leftItems.map((text, idx) => (
           <div
             key={idx}
@@ -94,7 +94,7 @@ export default function BenefitsSection() {
       </div>
 
       {/* Right Column */}
-      <div className="flex flex-col text-lg md:text-lg md:font-thin p-6 bg-blue-200 rounded-lg shadow-md w-full max-w-md">
+      <div className="flex flex-col text-lg md:text-lg md:font-thin p-6 rounded-lg shadow-2xl w-full max-w-md">
         {rightItems.map((text, idx) => (
           <div
             key={idx}
