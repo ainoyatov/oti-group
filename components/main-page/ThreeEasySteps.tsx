@@ -24,7 +24,7 @@ export default function ThreeEasySteps() {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="w-[350px] md:w-[300px] sm:w-full min-w-[250px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300"
+          className="w-[250px] md:w-[300px] sm:w-full min-w-[250px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300"
         >
           {/* Icon */}
           <Image
