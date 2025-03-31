@@ -2,7 +2,7 @@
 
 const ContactForm = () => {
     return (
-        <div className="flex-1 flex justify-center items-center p-4 ">
+        <div className="flex-1 flex justify-center p-4 ">
             <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70 nest-hub-fix">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                     Get Free No-Obligation Offer Now!
