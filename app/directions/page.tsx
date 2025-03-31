@@ -27,7 +27,7 @@ const Directions = () => {
       </div>
     </div>
     
-    <div className='p-4 w-full py-8 drop-shadow-xl'>
+    <div className='p-4 w-full h-screen md:h-auto py-8 md:py-0 drop-shadow-xl'>
       <Maps/>
     </div>
     
