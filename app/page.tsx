@@ -5,7 +5,7 @@ import ThirdDiv from "@/components/main-page/ThirdDiv";
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'We Buy Houses Cash - OT Investment Group',
+  title: 'Sell My House Fast - OT Investment Group',
   description: '',
   robots: {
     follow: true,

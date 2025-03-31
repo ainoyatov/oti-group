@@ -28,3 +28,20 @@ body {
 html {
   overflow-x: hidden;
 }
+
+.address__title {
+  @apply  text-[36px] md:text-[42px] lg:text-[48px] xl:text-[50px]  font-extrabold;
+}
+
+.address__subtitle {
+  @apply text-[18px] font-light dark:text-gray-500  lg:text-[20px] xl:text-[27px];
+}
+
+.address__button {
+  @apply py-2 px-4 bg-cyan-500 dark:bg-white dark:text-black text-white rounded-full my-6 sm:my-10 transition-colors hover:border-gray-300 hover:bg-[#F5B429] hover:dark:border-neutral-700 hover:dark:bg-blue-200
+}
+
+.map__container {
+  width: 100%;
+  height: 100%;
+}
