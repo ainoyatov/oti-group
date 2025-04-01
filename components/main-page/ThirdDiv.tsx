@@ -28,8 +28,8 @@ const ThirdDiv = () => {
             <div
               key={index}
               className="group shadow-lg border-2 border-white px-5 py-4 transition-colors
-                hover:border-gray-300 hover:bg-gray-500 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30
-                active:border-gray-300 active:bg-gray-500 active:dark:border-neutral-700 active:dark:bg-neutral-800/30"
+                hover:border-[#F5B429] hover:dark:border-[#F5B429]
+                active:border-[#F5B429] active:dark:border-[#F5B429]"
             >
               <div className="flex flex-row space-x-2 py-2">
                 <div className="flex items-center justify-center h-8 w-8 rounded-full bg-[#F5B429]">
