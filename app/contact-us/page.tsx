@@ -3,7 +3,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: '',
+  description: 'contact OT Investment Group, Dallas home buyers contact, property selling inquiries, real estate assistance Dallas, homeowner support, get in touch with OT Investment Group, sell my house contact, foreclosure help contact, property solutions inquiry, Dallas property buyers contact, home cash offer in 24 hours Dallas, what’s the best way to sell my home without hassle Dallas, behind on mortgage payments Dallas, how to sell my home before relocating Dallas, avoid foreclosure fast Dallas, mortgage default solutions Dallas, sell house in foreclosure fast Dallas, sell my house online fast Dallas, house buying companies near me Dallas, sell my home without a realtor contact, immediate home sale assistance Dallas',
   robots: {
     follow: true,
     index: true
