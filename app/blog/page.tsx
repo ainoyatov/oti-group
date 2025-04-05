@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div>Blog</div>
+    <div>Blog page</div>
   )
 }
 
