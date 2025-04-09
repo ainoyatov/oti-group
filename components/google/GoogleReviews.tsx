@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import ContentOfReviews from "./ContentsOfReviews";
 
 type GoogleReviewProps = {
     author_name: string;
@@ -57,7 +58,7 @@ const GoogleReviews = () => {
             ) : (
                 <div>
                     {memory.map((item) => (
-                        <div key={item.time}>{item.text}</div>
+                        <ContentOfReviews key={item.time} item={item} />
                     ))}
                 </div>
             )}
