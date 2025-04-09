@@ -1,4 +1,5 @@
 import GoogleReviews from "@/components/google/GoogleReviews"
+import MobileMenu from "@/components/navigation/MobileMenu"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,12 +11,14 @@ export const metadata: Metadata = {
   },
 }
 
-const page = () => {
+const BlogPage = () => {
   return (
     <div>
-      <GoogleReviews />
+      Blog Page
+      {/* <MobileMenu /> */}
+      {/* <GoogleReviews /> */}
     </div>
   )
 }
 
-export default page
+export default BlogPage

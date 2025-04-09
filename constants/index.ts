@@ -36,3 +36,14 @@ export const SocialLinks = [
         ]
     }
 ]
+
+export const MobileMenuLinks = [
+    {href: "/about-us", label:"About"},
+    {href: "/blog", label:"Blog"},
+    {href:"/how-it-works", label:"How it works"},
+    {href: "/appointment", label:"Appointment"},
+    {href: "/contact-us", label:"Contact"},
+    {href:"/directions", label:"Directions"},
+    {href:"/faq", label:"Faq"},
+
+]

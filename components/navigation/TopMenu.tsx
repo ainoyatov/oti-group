@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
+import MobileMenu from "./MobileMenu";
 
 export default function TopMenu() {
     const pathname = usePathname();
@@ -59,6 +60,10 @@ export default function TopMenu() {
                         <div>682-267-7741</div>
                     </button>
                 </a>
+            </div>
+
+            <div className="flex items-center">
+                <MobileMenu />
             </div>
 
             
