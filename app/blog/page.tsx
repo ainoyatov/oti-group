@@ -1,3 +1,4 @@
+import GoogleReviews from "@/components/google/GoogleReviews"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div>Blog page</div>
+    <div>
+      <GoogleReviews />
+    </div>
   )
 }
 

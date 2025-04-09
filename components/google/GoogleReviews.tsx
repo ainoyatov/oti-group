@@ -33,7 +33,7 @@ const GoogleReviews = () => {
             if (!response.ok) throw new Error("Failed to fetch reviews");
 
             const data = await response.json();
-            setMemory(data.GoogleReviews ?? []);
+            setMemory(data.Reviews ?? []);
 
         } catch (error) {
             console.error("Error fetching reviews:", error);
@@ -64,3 +64,5 @@ const GoogleReviews = () => {
         </div>
     );
 }
+
+export default GoogleReviews;
