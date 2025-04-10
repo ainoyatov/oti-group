@@ -1,8 +1,6 @@
 'use client';
 
-import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { MobileMenuLinks } from "@/constants";
 
 const MobileMenu = () => {
@@ -11,12 +9,6 @@ const MobileMenu = () => {
 
     const handleClickMobile = () => {
         setIsMobile(() => !isMobile);
-    }
-
-    const router = useRouter();
-    
-    const handleClick = () => {
-        router.push('/');
     }
 
     return (

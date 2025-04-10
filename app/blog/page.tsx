@@ -14,9 +14,7 @@ export const metadata: Metadata = {
 const BlogPage = () => {
   return (
     <div>
-      Blog Page
-      {/* <MobileMenu /> */}
-      {/* <GoogleReviews /> */}
+      <GoogleReviews />
     </div>
   )
 }
