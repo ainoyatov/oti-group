@@ -20,8 +20,8 @@ const MobileMenu = () => {
     }
 
     return (
-        <div>
-            <div className="sm:hidden">
+        <div className="flex w-full">
+            <div className="lg:hidden">
                 <button
                     onClick={handleClickMobile}
                     type="button"
