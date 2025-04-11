@@ -21,8 +21,8 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 const BlogPage = () => {
   return (
     <div>
-      <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
-      {/* <GoogleReviews /> */}
+      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS}/> */}
+      <GoogleReviews slides={SLIDES} options={OPTIONS}/>
     </div>
   )
 }

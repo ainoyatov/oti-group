@@ -36,7 +36,7 @@ const ContentOfReviews: React.FC<{item: GoogleReviewProps}> = ({item}) => {
 
 
     return (
-        <div>
+        <div className="">
             <div className="flex-col space-y-2 py-8 rounded-[1.8rem] font-semibold flex select-none h-auto">
             <div className="flex flex-row gap-2 items-center justify-center">
                 <div className="">
