@@ -1,8 +1,8 @@
 export const NavLinks = [
     {href: "/about-us", label:"ABOUT"},
-    {href: "/blog", label:"BLOG"},
     {href: "/appointment", label:"APPOINTMENT"},
     {href: "/contact-us", label:"CONTACT"},
+    {href:"/how-it-works", label:"WORKFLOW"}
 ]
 
 export const FooterLinks = [
@@ -38,9 +38,10 @@ export const SocialLinks = [
 ]
 
 export const MobileMenuLinks = [
-    {href:"/how-it-works", label:"How it works"},
+    {href: "/about-us", label:"About"},
     {href: "/appointment", label:"Appointment"},
     {href: "/contact-us", label:"Contact"},
+    {href:"/how-it-works", label:"How it works"},
     {href:"/directions", label:"Directions"},
-    {href:"/faq", label:"Faq"},
+    {href:"/faq", label:"FAQ"},
 ]

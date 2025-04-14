@@ -72,8 +72,8 @@ const GoogleReviews: React.FC<PropType> = (props) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {memory.map((item, index) => (
-                        <div className='embla__slide border border-gray-400 rounded-xl' key={index}>
-                            <ContentOfReviews item={item} />
+                        <div key={item.time} className='embla__slide border border-gray-400 rounded-xl'>
+                            <ContentOfReviews item={item}  />
                         </div>
                     ))}
                 </div>
