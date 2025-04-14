@@ -12,11 +12,11 @@ const Maps = () => {
   
     function Map() {
   
-    const center = useMemo(() => ({lat: 33.61636, lng: -111.90330}), []);
+    const center = useMemo(() => ({lat: 32.9332302, lng: -96.8094653}), []);
   
       return(
         <GoogleMap
-          zoom={12}
+          zoom={15}
           center={center}
           mapContainerClassName="map__container"
         >

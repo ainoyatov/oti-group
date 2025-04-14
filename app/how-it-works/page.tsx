@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const HowItWorks = () => {
   return (
-    <div>
+    <div className="py-8">
         <div className="flex text-4xl md:text-5xl font-bold justify-center pb-8 text-[#F5B429]">How It Works?</div>
         <div className="flex flex-wrap md:flex-nowrap space-y-16 items-center justify-center p-2">
           {/*Left Column */}
