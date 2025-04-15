@@ -32,23 +32,21 @@ const ContactForm = () => {
 
         }
 
-        console.log(payload);
+        const res = await fetch('/api/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload),
+        })
 
-        // const res = await fetch('/api/form', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(payload),
-        // })
-
-        // const data = await res.json();
+        const data = await res.json();
         // setState(data);
         // sendEmail(data);
 
-        // if (data.status == 'ok') {
-        //     setTimeout(() => window.location.reload(), 2000)
-        // }
+        if (data.status == 'ok') {
+            setTimeout(() => window.location.reload(), 2000)
+        }
     }
 
     return (

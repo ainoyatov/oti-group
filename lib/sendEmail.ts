@@ -9,13 +9,15 @@ export type FormDataPoints = {
 }
 
 
-export async function sendEmail(data: FormDataPoints) {
+export async function sendEmail(payload: FormDataPoints) {
+
+    console.log(payload);
 
     const push = await fetch('/api/email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({data})
+        body: JSON.stringify({payload})
     })
 }
