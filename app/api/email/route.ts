@@ -33,11 +33,11 @@ export async function POST(request:NextRequest) {
         // subject: `${purpose}`,
         subject: `${full_name}`,
         text: `
-Full Name: ${full_name},
 Property Address: ${property_address},
 City: ${city},
 State: ${state},
-Zipcode: ${zipcode},
+Zipcode: ${zipcode},       
+Full Name: ${full_name},
 Phone: ${phone},
 Email: ${email}
 
