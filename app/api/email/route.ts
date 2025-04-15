@@ -1,10 +1,11 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { type NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request:NextRequest) {
 
-    const {property_address, full_name, phone, email} = await request.json();
+    const {property_address, full_name, city, state, zipcode, phone, email} = await request.json();
 
     const transport = nodemailer.createTransport({
         service: 'gmail',
@@ -26,12 +27,22 @@ export async function POST(request:NextRequest) {
     const from_email = process.env.GMAIL_EMAIL_FROM
 
     const mailOptions: Mail.Options = {
-        from: `New client contact ${from_email}`,
+        from: `New Client`,
         to: `${process.env.GMAIL_EMAIL_TWO}`,
         // cc: email, (uncomment this line if you want to send a copy to the sender)
         // subject: `${purpose}`,
-        subject: `[${full_name}]: ${phone}, ${email}`,
-        text: property_address
+        subject: `${full_name}`,
+        text: `
+Full Name: ${full_name},
+Property Address: ${property_address},
+City: ${city},
+State: ${state},
+Zipcode: ${zipcode},
+Phone: ${phone},
+Email: ${email}
+
+`
+
     };
 
     const sendMailPromise = () =>

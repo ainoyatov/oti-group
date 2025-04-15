@@ -2,6 +2,7 @@
 
 import { sendEmail } from "@/lib/sendEmail";
 import { useState } from "react";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export type FormDataPoints = {
     property_address?: string,
@@ -17,36 +18,50 @@ export type FormDataPoints = {
 const ContactForm = () => {
 
     const [state, setState] = useState({});
+    const [captcha, setCaptcha] = useState<string | null>(null);
     
     const FormAction = async (formData: FormData) => {
 
-        // Build payload
-        const payload: FormDataPoints = {
-            property_address: formData.get('property-address') as string,
-            city: formData.get('city') as string,
-            state: formData.get('state') as string,
-            zipcode: formData.get('zipcode') as string,
-            full_name: formData.get('full-name') as string,
-            email: formData.get('email') as string,
-            phone: formData.get('phone') as string,
+        if (captcha) {
 
+            // Build payload
+            const payload: FormDataPoints = {
+                property_address: formData.get('property-address') as string,
+                city: formData.get('city') as string,
+                state: formData.get('state') as string,
+                zipcode: formData.get('zipcode') as string,
+                full_name: formData.get('full-name') as string,
+                email: formData.get('email') as string,
+                phone: formData.get('phone') as string,
+
+            }
+            
+            const verifyCaptcha = await fetch('/api/recaptcha', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({captcha})
+            })
+
+            const {response} = await verifyCaptcha.json();
+
+            if (response) {
+                setState(payload);
+                
+                sendEmail(payload);
+
+                alert('Your message has been sent. Thank you for contacting us.')
+                window.location.reload()
+            } else {
+                alert('Please refresh the page and re-verify Captcha');
+            }
+
+        } else {
+            alert('Please verify Captcha.')
         }
 
-        const res = await fetch('/api/email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload),
-        })
-
-        const data = await res.json();
-        // setState(data);
-        // sendEmail(data);
-
-        if (data.status == 'ok') {
-            setTimeout(() => window.location.reload(), 2000)
-        }
+        
     }
 
     return (
@@ -66,6 +81,13 @@ const ContactForm = () => {
                     <input type="text" name="full-name" placeholder="Full Name" className="w-full p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
                     <input type="email" name="email" placeholder="Email" className="w-full p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
                     <input type="text" name="phone" placeholder="Phone" className="w-full p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
+                    <div className='mt-4'>
+                        <ReCAPTCHA 
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE!} 
+                            className='w-full mt-4'
+                            onChange={setCaptcha}
+                        />
+                    </div>
                     <button type="submit" className="w-full bg-black p-3 rounded-md text-white font-bold">
                         Get Cash Offer
                     </button>
