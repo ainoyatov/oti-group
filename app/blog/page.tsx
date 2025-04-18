@@ -3,6 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import GoogleReviews from "@/components/google/GoogleReviews"
 import MobileMenu from "@/components/navigation/MobileMenu"
 import { Metadata } from "next"
+import TextCarousel from "@/components/google/StaticReviews"
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -21,8 +22,9 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 const BlogPage = () => {
   return (
     <div>
+      <TextCarousel />
       {/* <EmblaCarousel slides={SLIDES} options={OPTIONS}/> */}
-      <GoogleReviews slides={SLIDES} options={OPTIONS}/>
+      {/* <GoogleReviews slides={SLIDES} options={OPTIONS}/> */}
     </div>
   )
 }
