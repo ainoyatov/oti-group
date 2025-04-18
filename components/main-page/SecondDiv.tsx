@@ -40,12 +40,18 @@ const SecondDiv = () => {
 
           <ThreeEasySteps />
 
-          <a href="tel:+16822677741">
+          <a href="mailto:vince@otinvestmentsgroup.com">
+            <button className="flex flex-row p-2 px-4 gap-2 text-xl items-center cursor-pointer max-lg:hidden transition-transform transform hover:scale-125 active:scale-125 bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md shadow-2xl">
+              <Icon icon="mdi:email" width={24} height={24} />
+              <div>Send email</div>
+            </button>
+          </a>
+          {/* <a href="tel:+16822677741">
             <button className="flex flex-row p-2 mt-8 px-4 gap-2 text-2xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125  bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md shadow-2xl">
               <Icon icon="mingcute:phone-call-fill" width={24} height={24} />
               <span>Call Me Today</span>
             </button>
-          </a>
+          </a> */}
 
       </div>
     </div>

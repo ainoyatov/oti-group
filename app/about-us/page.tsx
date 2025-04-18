@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import {Icon} from '@iconify/react'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -43,6 +44,15 @@ export default function AboutSection() {
             We understand that navigating real estate and financing can come with challenges. That’s why we’re
             committed to helping you overcome any roadblocks along the way — providing solutions, not just transactions.
           </p>
+
+          <div className="pt-8">
+            <a href="mailto:vince@otinvestmentsgroup.com">
+              <button className="flex flex-row p-2 px-4 gap-2 text-xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125 bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md shadow-2xl">
+                <Icon icon="mdi:email" width={24} height={24} />
+                <div>Contact us today</div>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
