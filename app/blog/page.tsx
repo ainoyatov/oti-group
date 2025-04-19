@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import TextCarousel from "@/components/google/StaticReviews"
+import GoogleReviewCount from "@/components/google/ReviewCount"
+
 
 export const metadata: Metadata = {
   title: 'Blog',

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import GoogleReviewCount from './ReviewCount';
 
 const GoogleReviewsStatic = [
     { user: "Nick Reeves", message: "Vince was great, smooth process, excellent communication throughout, would happily work with them again. Thanks!" },
@@ -51,179 +52,183 @@ const TextCarousel = () => {
     
 
     return(
-        <div className='py-8'>
-            {/* Mobile Carousel */}
-            <div className="flex flex-row items-center justify-between lg:hidden">
-            {/* Left button (hide if at first slide) */}
-            {currentIndex > 0 ? (
-                <div onClick={handleLeftClick} className="flex p-4 cursor-pointer">
-                <Icon icon="lucide:chevron-left" width="28" height="28" color="#F5B429" />
-                </div>
-            ) : (
-                <div className="w-[56px] p-4" /> // placeholder for spacing
-            )}
+        <div className="flex flex-col gap-y-8 sm:flex-row items-center p-8 w-full justify-center">
+            <div className="flex flex-col sm:flex-row items-center gap-y-8 gap-x-8 max-w-6xl w-full">
+                <GoogleReviewCount />
 
-            {/* Message container with slide effect (unchanged from last working version) */}
-            <div className="relative w-full max-w-xs overflow-hidden">
-                <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                >
-                {GoogleReviewsStatic.map((review, index) => {
-                    const isLong = review.message.length > 100;
-                    const isExpanded = expandedIndices.includes(index);
+                {/* Mobile Carousel */}
+                <div className="flex flex-row items-center justify-between max-w-sm lg:hidden">
+                    {/* Left button (hide if at first slide) */}
+                    {currentIndex > 0 ? (
+                        <div onClick={handleLeftClick} className="flex p-4 cursor-pointer">
+                            <Icon icon="lucide:chevron-left" width="28" height="28" color="#F5B429" />
+                        </div>
+                    ) : (
+                        <div className="w-[56px] p-4" /> // placeholder for spacing
+                    )}
 
-                    return (
-                    <div
-                        key={index}
-                        className="w-full flex-shrink-0 flex flex-col p-4 text-sm bg-gray-100 dark:bg-gray-500 rounded-xl"
-                    >   
-                        <div className='flex flex-col-2 items-center justify-between'>
-                            <div className='flex flex-row items-center gap-2'>
+                    {/* Message container with slide effect (unchanged from last working version) */}
+                    <div className="relative w-full max-w-xs overflow-hidden">
+                        <div
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+
+                            {GoogleReviewsStatic.map((review, index) => {
+                                const isLong = review.message.length > 100;
+                                const isExpanded = expandedIndices.includes(index);
+
+                                return (
                                 <div
-                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
-                                    style={{ backgroundColor: generateColorFromName(review.user) }}
-                                    >
-                                    {review.user.charAt(0)}
-                                </div>
-                                <div className="font-semibold">{review.user}</div>
-                            </div>
-                            <div>
-                                <Image 
-                                    src="/google-logo.png"
-                                    alt="google logo"
-                                    width={24}
-                                    height={24}
-                                />
-                            </div>
-                        </div>
-                        
-                        
-                        <div className="flex flex-row w-full py-2">
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                        </div>
-
-                        <div className="flex flex-col italic mt-1">
-                        "{isLong && !isExpanded
-                            ? review.message.slice(0, 100) + '...'
-                            : review.message}"
-                        {isLong && (
-                            <button
-                            onClick={() => toggleExpand(index)}
-                            className="flex text-[#F5B429] underline"
-                            >
-                            {isExpanded ? 'Read less' : 'Read more'}
-                            </button>
-                        )}
-                        </div>
-                    </div>
-                    );
-                })}
-                </div>
-            </div>
-
-            {/* Right button (hide if at last slide) */}
-            {currentIndex < GoogleReviewsStatic.length - 1 ? (
-                <div onClick={handleRightClick} className="flex p-4 cursor-pointer">
-                <Icon icon="lucide:chevron-right" width="28" height="28" color="#F5B429" />
-                </div>
-            ) : (
-                <div className="w-[56px] p-4" /> // placeholder
-            )}
-            </div>
-
-
-            {/* Desktop Carousel */}
-            <div className="max-lg:hidden relative px-6 flex items-center justify-between overflow-hidden">
-            {/* Left button (hide if at first 3) */}
-            {currentIndex > 0 ? (
-                <div onClick={handleLeftClick} className="p-4 cursor-pointer z-10">
-                <Icon icon="lucide:chevron-left" width="32" height="32" color="#F5B429" />
-                </div>
-            ) : (
-                <div className="w-[64px] p-4" /> // placeholder for spacing
-            )}
-
-            {/* Review track */}
-            <div className="relative w-full overflow-hidden">
-                <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-                >
-                {GoogleReviewsStatic.map((review, index) => {
-                    const isLong = review.message.length > 100;
-                    const isExpanded = expandedIndices.includes(index);
-
-                    return (
-                    <div key={index} className="w-1/3 flex-shrink-0 px-3">
-                        <div className="bg-gray-100 dark:bg-gray-500 rounded-xl p-4 text-sm h-full">
-                            <div className='flex flex-col-2 items-center justify-between'>
-                                <div className='flex flex-row items-center gap-2'>
-                                    <div
-                                        className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
-                                        style={{ backgroundColor: generateColorFromName(review.user) }}
-                                        >
-                                        {review.user.charAt(0)}
+                                    key={index}
+                                    className="w-full flex-shrink-0 flex flex-col p-4 text-sm bg-gray-100 dark:bg-gray-500 rounded-xl"
+                                >   
+                                    <div className='flex flex-col-2 items-center justify-between'>
+                                        <div className='flex flex-row items-center gap-2'>
+                                            <div
+                                                className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
+                                                style={{ backgroundColor: generateColorFromName(review.user) }}
+                                                >
+                                                {review.user.charAt(0)}
+                                            </div>
+                                            <div className="font-semibold">{review.user}</div>
+                                        </div>
+                                        <div>
+                                            <Image 
+                                                src="/google-logo.png"
+                                                alt="google logo"
+                                                width={24}
+                                                height={24}
+                                            />
+                                        </div>
                                     </div>
-                                    <div className="font-semibold">{review.user}</div>
-                                </div>
-                                <div>
-                                    <Image 
-                                        src="/google-logo.png"
-                                        alt="google logo"
-                                        width={24}
-                                        height={24}
-                                    />
-                                </div>
-                            </div>
+                                    
+                                    
+                                    <div className="flex flex-row w-full py-2">
+                                        <Icon icon="noto:star" width="24" height="24"/>
+                                        <Icon icon="noto:star" width="24" height="24"/>
+                                        <Icon icon="noto:star" width="24" height="24"/>
+                                        <Icon icon="noto:star" width="24" height="24"/>
+                                        <Icon icon="noto:star" width="24" height="24"/>
+                                    </div>
 
-                            <div className="flex flex-row w-full py-2">
-                                <Icon icon="noto:star" width="24" height="24"/>
-                                <Icon icon="noto:star" width="24" height="24"/>
-                                <Icon icon="noto:star" width="24" height="24"/>
-                                <Icon icon="noto:star" width="24" height="24"/>
-                                <Icon icon="noto:star" width="24" height="24"/>
-                            </div>
-
-                            <div className="flex flex-col italic">
-                                "{isLong && !isExpanded
-                                ? review.message.slice(0, 100) + '...'
-                                : review.message}"
-                                {isLong && (
-                                <button
-                                    onClick={() => toggleExpand(index)}
-                                    className="flex text-[#F5B429] underline"
-                                >
-                                    {isExpanded ? 'Read less' : 'Read more'}
-                                </button>
-                                )}
-                            </div>
+                                    <div className="flex flex-col italic mt-1">
+                                    "{isLong && !isExpanded
+                                        ? review.message.slice(0, 100) + '...'
+                                        : review.message}"
+                                    {isLong && (
+                                        <button
+                                        onClick={() => toggleExpand(index)}
+                                        className="flex text-[#F5B429] underline"
+                                        >
+                                        {isExpanded ? 'Read less' : 'Read more'}
+                                        </button>
+                                    )}
+                                    </div>
+                                </div>
+                                );
+                            })}
                         </div>
                     </div>
-                    );
-                })}
+
+                    {/* Right button (hide if at last slide) */}
+                    {currentIndex < GoogleReviewsStatic.length - 1 ? (
+                        <div onClick={handleRightClick} className="flex p-4 cursor-pointer">
+                        <Icon icon="lucide:chevron-right" width="28" height="28" color="#F5B429" />
+                        </div>
+                    ) : (
+                        <div className="w-[56px] p-4" /> // placeholder
+                    )}
+                </div>
+
+
+                {/* Desktop Carousel */}
+                <div className="max-lg:hidden relative px-6 flex items-center justify-between overflow-hidden">
+
+                    {/* Left button (hide if at first 3) */}
+                    {currentIndex > 0 ? (
+                        <div onClick={handleLeftClick} className="p-4 cursor-pointer z-10">
+                            <Icon icon="lucide:chevron-left" width="32" height="32" color="#F5B429" />
+                        </div>
+                    ) : (
+                        <div className="w-[64px] p-4" /> // placeholder for spacing
+                    )}
+
+                    {/* Review track */}
+                    <div className="relative w-full overflow-hidden">
+                        <div
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+                        >
+                            {GoogleReviewsStatic.map((review, index) => {
+                                const isLong = review.message.length > 100;
+                                const isExpanded = expandedIndices.includes(index);
+
+                                return (
+                                    <div key={index} className="w-1/3 flex-shrink-0 px-3">
+                                        <div className="bg-gray-100 dark:bg-gray-500 rounded-xl p-4 text-sm h-full">
+                                            <div className='flex flex-col-2 items-center justify-between'>
+                                                <div className='flex flex-row items-center gap-2'>
+                                                    <div
+                                                        className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
+                                                        style={{ backgroundColor: generateColorFromName(review.user) }}
+                                                        >
+                                                        {review.user.charAt(0)}
+                                                    </div>
+                                                    <div className="font-semibold">{review.user}</div>
+                                                </div>
+                                                <div>
+                                                    <Image 
+                                                        src="/google-logo.png"
+                                                        alt="google logo"
+                                                        width={24}
+                                                        height={24}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-row w-full py-2">
+                                                <Icon icon="noto:star" width="24" height="24"/>
+                                                <Icon icon="noto:star" width="24" height="24"/>
+                                                <Icon icon="noto:star" width="24" height="24"/>
+                                                <Icon icon="noto:star" width="24" height="24"/>
+                                                <Icon icon="noto:star" width="24" height="24"/>
+                                            </div>
+
+                                            <div className="flex flex-col italic">
+                                                "{isLong && !isExpanded
+                                                ? review.message.slice(0, 100) + '...'
+                                                : review.message}"
+                                                {isLong && (
+                                                <button
+                                                    onClick={() => toggleExpand(index)}
+                                                    className="flex text-[#F5B429] underline"
+                                                >
+                                                    {isExpanded ? 'Read less' : 'Read more'}
+                                                </button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Right button (hide if last 3 visible) */}
+                    {currentIndex < GoogleReviewsStatic.length - 3 ? (
+                        <div onClick={handleRightClick} className="p-4 cursor-pointer z-10">
+                        <Icon icon="lucide:chevron-right" width="32" height="32" color="#F5B429" />
+                        </div>
+                    ) : (
+                        <div className="w-[64px] p-4" />
+                    )}
+                
                 </div>
             </div>
-
-            {/* Right button (hide if last 3 visible) */}
-            {currentIndex < GoogleReviewsStatic.length - 3 ? (
-                <div onClick={handleRightClick} className="p-4 cursor-pointer z-10">
-                <Icon icon="lucide:chevron-right" width="32" height="32" color="#F5B429" />
-                </div>
-            ) : (
-                <div className="w-[64px] p-4" />
-            )}
-            </div>
-
-
-
         </div>
+    
     );
-
 
 };
 

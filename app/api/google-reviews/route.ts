@@ -1,10 +1,12 @@
-import { type NextRequest, NextResponse } from "next/server";
-import RecentReviews from "@/lib/recentReviews";
+import { type NextRequest } from "next/server";
+import { NextResponse } from "next/server";
+
+import TotalReviewCount from "@/lib/recentReviews";
 
 export async function POST(request:NextRequest) {
     
-    const Reviews = await RecentReviews()
+    const DynamicReviewCount = await TotalReviewCount()
 
-    return NextResponse.json({Reviews})
+    return NextResponse.json({DynamicReviewCount})
 
 }
