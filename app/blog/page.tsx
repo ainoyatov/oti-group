@@ -1,7 +1,3 @@
-import EmblaCarousel from "@/components/embla/EmblaCarousel"
-import { EmblaOptionsType } from 'embla-carousel'
-import GoogleReviews from "@/components/google/GoogleReviews"
-import MobileMenu from "@/components/navigation/MobileMenu"
 import { Metadata } from "next"
 import TextCarousel from "@/components/google/StaticReviews"
 
@@ -14,17 +10,12 @@ export const metadata: Metadata = {
   },
 }
 
-const OPTIONS: EmblaOptionsType = { slidesToScroll: 'auto' }
-const SLIDE_COUNT = 10
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 
 const BlogPage = () => {
   return (
     <div>
       <TextCarousel />
-      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS}/> */}
-      {/* <GoogleReviews slides={SLIDES} options={OPTIONS}/> */}
     </div>
   )
 }

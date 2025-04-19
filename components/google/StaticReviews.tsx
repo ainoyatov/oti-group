@@ -76,12 +76,12 @@ const TextCarousel = () => {
                     return (
                     <div
                         key={index}
-                        className="w-full flex-shrink-0 flex flex-col p-4 text-sm bg-gray-100 rounded-xl"
+                        className="w-full flex-shrink-0 flex flex-col p-4 text-sm bg-gray-100 dark:bg-gray-500 rounded-xl"
                     >   
                         <div className='flex flex-col-2 items-center justify-between'>
                             <div className='flex flex-row items-center gap-2'>
                                 <div
-                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold"
+                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
                                     style={{ backgroundColor: generateColorFromName(review.user) }}
                                     >
                                     {review.user.charAt(0)}
@@ -107,14 +107,14 @@ const TextCarousel = () => {
                             <Icon icon="noto:star" width="24" height="24"/>
                         </div>
 
-                        <div className="italic mt-1">
+                        <div className="flex flex-col italic mt-1">
                         "{isLong && !isExpanded
                             ? review.message.slice(0, 100) + '...'
                             : review.message}"
                         {isLong && (
                             <button
                             onClick={() => toggleExpand(index)}
-                            className="ml-2 text-[#F5B429] underline"
+                            className="flex text-[#F5B429] underline"
                             >
                             {isExpanded ? 'Read less' : 'Read more'}
                             </button>
@@ -160,48 +160,48 @@ const TextCarousel = () => {
 
                     return (
                     <div key={index} className="w-1/3 flex-shrink-0 px-3">
-                        <div className="bg-gray-100 rounded-xl p-4 text-sm h-full">
-                        <div className='flex flex-col-2 items-center justify-between'>
-                            <div className='flex flex-row items-center gap-2'>
-                                <div
-                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold"
-                                    style={{ backgroundColor: generateColorFromName(review.user) }}
-                                    >
-                                    {review.user.charAt(0)}
+                        <div className="bg-gray-100 dark:bg-gray-500 rounded-xl p-4 text-sm h-full">
+                            <div className='flex flex-col-2 items-center justify-between'>
+                                <div className='flex flex-row items-center gap-2'>
+                                    <div
+                                        className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold dark:text-black"
+                                        style={{ backgroundColor: generateColorFromName(review.user) }}
+                                        >
+                                        {review.user.charAt(0)}
+                                    </div>
+                                    <div className="font-semibold">{review.user}</div>
                                 </div>
-                                <div className="font-semibold">{review.user}</div>
+                                <div>
+                                    <Image 
+                                        src="/google-logo.png"
+                                        alt="google logo"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </div>
                             </div>
-                            <div>
-                                <Image 
-                                    src="/google-logo.png"
-                                    alt="google logo"
-                                    width={24}
-                                    height={24}
-                                />
+
+                            <div className="flex flex-row w-full py-2">
+                                <Icon icon="noto:star" width="24" height="24"/>
+                                <Icon icon="noto:star" width="24" height="24"/>
+                                <Icon icon="noto:star" width="24" height="24"/>
+                                <Icon icon="noto:star" width="24" height="24"/>
+                                <Icon icon="noto:star" width="24" height="24"/>
                             </div>
-                        </div>
 
-                        <div className="flex flex-row w-full py-2">
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                            <Icon icon="noto:star" width="24" height="24"/>
-                        </div>
-
-                        <div className="italic">
-                            "{isLong && !isExpanded
-                            ? review.message.slice(0, 100) + '...'
-                            : review.message}"
-                            {isLong && (
-                            <button
-                                onClick={() => toggleExpand(index)}
-                                className="ml-2 text-[#F5B429] underline"
-                            >
-                                {isExpanded ? 'Read less' : 'Read more'}
-                            </button>
-                            )}
-                        </div>
+                            <div className="flex flex-col italic">
+                                "{isLong && !isExpanded
+                                ? review.message.slice(0, 100) + '...'
+                                : review.message}"
+                                {isLong && (
+                                <button
+                                    onClick={() => toggleExpand(index)}
+                                    className="flex text-[#F5B429] underline"
+                                >
+                                    {isExpanded ? 'Read less' : 'Read more'}
+                                </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                     );

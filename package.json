@@ -12,8 +12,6 @@
     "@iconify/react": "^5.2.0",
     "@react-google-maps/api": "^2.20.6",
     "@types/nodemailer": "^6.4.17",
-    "embla-carousel": "^8.6.0",
-    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.7.4",
     "next": "^15.2.4",
     "nodemailer": "^6.10.1",
