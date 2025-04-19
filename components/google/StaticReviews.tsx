@@ -43,36 +43,36 @@ const TextCarousel = () => {
   };
 
   return (
-    <div className="bg-gray-700">
+    <div className="py-8">
       {/* Mobile Carousel */}
       <div className="flex flex-row justify-between items-center lg:hidden">
         <div onClick={handleLeftClick} className="flex p-4 cursor-pointer">
-          <Icon icon="lucide:chevron-left" width="28" height="28" color="white" />
+          <Icon icon="lucide:chevron-left" width="28" height="28" color="#F5B429" />
         </div>
 
-        <div className="flex flex-col text-sm text-white text-center px-4 max-w-xs">
+        <div className="flex flex-col p-4 text-sm px-4 max-w-xs bg-gray-100 rounded-xl">
           <div className="font-semibold">{GoogleReviewsStatic[currentIndex].user}</div>
           <div className="italic mt-1">"{GoogleReviewsStatic[currentIndex].message}"</div>
         </div>
 
         <div onClick={handleRightClick} className="flex p-4 cursor-pointer">
-          <Icon icon="lucide:chevron-right" width="28" height="28" color="white" />
+          <Icon icon="lucide:chevron-right" width="28" height="28" color="#F5B429" />
         </div>
       </div>
 
       {/* Desktop Carousel */}
       <div className="max-lg:hidden flex flex-row items-center justify-between min-h-[160px] px-6">
         <div onClick={handleLeftClick} className="p-4 cursor-pointer">
-          <Icon icon="lucide:chevron-left" width="32" height="32" color="white" />
+          <Icon icon="lucide:chevron-left" width="32" height="32" color="#F5B429" />
         </div>
 
-        <div className="grid grid-cols-3 gap-6 flex-grow text-white text-sm px-4">
+        <div className="grid grid-cols-3 gap-6 flex-grow text-sm px-4">
           {getDesktopReviews().map((review) => {
             const isLong = review.message.length > 100;
             const isExpanded = expandedIndices.includes(review.index);
 
             return (
-              <div key={review.index} className="text-center">
+              <div key={review.index} className=" bg-gray-100 rounded-xl p-4">
                 <div className="font-semibold mb-1">{review.user}</div>
                 <div className="italic">
                   "{isLong && !isExpanded
@@ -93,7 +93,7 @@ const TextCarousel = () => {
         </div>
 
         <div onClick={handleRightClick} className="p-4 cursor-pointer">
-          <Icon icon="lucide:chevron-right" width="32" height="32" color="white" />
+          <Icon icon="lucide:chevron-right" width="32" height="32" color="#F5B429" />
         </div>
       </div>
     </div>
