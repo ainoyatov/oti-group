@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 const GoogleReviewsStatic = [
     { user: "Nick Reeves", message: "Vince was great, smooth process, excellent communication throughout, would happily work with them again. Thanks!" },
@@ -37,6 +38,16 @@ const TextCarousel = () => {
           setCurrentIndex((prev) => prev - 1);
         }
     };
+
+    // Generates a pastel HSL color from a string
+    const generateColorFromName = (name: string) => {
+        let hash = 0;
+        for (let i = 0; i < name.length; i++) {
+        hash = name.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        const hue = hash % 360;
+        return `hsl(${hue}, 70%, 80%)`;
+    };
     
 
     return(
@@ -66,8 +77,36 @@ const TextCarousel = () => {
                     <div
                         key={index}
                         className="w-full flex-shrink-0 flex flex-col p-4 text-sm bg-gray-100 rounded-xl"
-                    >
-                        <div className="font-semibold">{review.user}</div>
+                    >   
+                        <div className='flex flex-col-2 items-center justify-between'>
+                            <div className='flex flex-row items-center gap-2'>
+                                <div
+                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold"
+                                    style={{ backgroundColor: generateColorFromName(review.user) }}
+                                    >
+                                    {review.user.charAt(0)}
+                                </div>
+                                <div className="font-semibold">{review.user}</div>
+                            </div>
+                            <div>
+                                <Image 
+                                    src="/google-logo.png"
+                                    alt="google logo"
+                                    width={24}
+                                    height={24}
+                                />
+                            </div>
+                        </div>
+                        
+                        
+                        <div className="flex flex-row w-full py-2">
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                        </div>
+
                         <div className="italic mt-1">
                         "{isLong && !isExpanded
                             ? review.message.slice(0, 100) + '...'
@@ -122,7 +161,34 @@ const TextCarousel = () => {
                     return (
                     <div key={index} className="w-1/3 flex-shrink-0 px-3">
                         <div className="bg-gray-100 rounded-xl p-4 text-sm h-full">
-                        <div className="font-semibold mb-1">{review.user}</div>
+                        <div className='flex flex-col-2 items-center justify-between'>
+                            <div className='flex flex-row items-center gap-2'>
+                                <div
+                                    className="flex h-8 w-8 rounded-full items-center justify-center text-sm font-semibold"
+                                    style={{ backgroundColor: generateColorFromName(review.user) }}
+                                    >
+                                    {review.user.charAt(0)}
+                                </div>
+                                <div className="font-semibold">{review.user}</div>
+                            </div>
+                            <div>
+                                <Image 
+                                    src="/google-logo.png"
+                                    alt="google logo"
+                                    width={24}
+                                    height={24}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-row w-full py-2">
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                            <Icon icon="noto:star" width="24" height="24"/>
+                        </div>
+
                         <div className="italic">
                             "{isLong && !isExpanded
                             ? review.message.slice(0, 100) + '...'
