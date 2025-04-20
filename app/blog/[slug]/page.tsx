@@ -1,14 +1,26 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import { blogPosts } from "@/components/blog-posts/BlogData"
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'real estate advice, home selling tips, Dallas property market, foreclosure prevention, property management insights, investment property strategies, homeowner resources, real estate market trends, selling a house in Texas, cash home sales explained, does selling to an investor make sense?, how to sell my home before relocating Dallas, selling a house that needs major repairs Dallas, what’s the fastest way to sell my house in Texas, can I sell my house in 7 days?, who can buy my house this week in Dallas?, how to sell a house with bad tenants Dallas, how to avoid foreclosure in Texas, when is the best time to sell a house in Dallas?, how to sell an inherited house in Texas, selling a house while in probate, real estate scams to avoid',
-  robots: {
-    follow: true,
-    index: true
-  },
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'This blog post could not be found.',
+    }
+  }
+
+  return {
+    title: post.title,
+    description: post.body,
+    robots: {
+      follow: true,
+      index: true
+    }
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -16,13 +28,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {
-    return <div>Post not found.</div>
+    return <div className="text-center text-red-500 dark:text-red-400">Post not found.</div>
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 text-gray-800 dark:text-gray-200">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <p className="text-lg text-gray-800">{post.body}</p>
+
+      {/* Optional date display */}
+      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+        Posted on {new Date(post.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        })}
+      </p>
+
+      <p className="text-lg mb-8 leading-relaxed">
+        {post.body}
+      </p>
+
+      <Link href="/blog">
+        <button className="px-4 py-2 bg-gray-200 dark:bg-gray-700 dark:text-white text-gray-900 hover:bg-gray-300 dark:hover:bg-gray-600 rounded transition">
+          ← Back to Blog
+        </button>
+      </Link>
     </div>
   )
 }
