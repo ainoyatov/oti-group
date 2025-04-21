@@ -31,20 +31,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return <div className="text-center text-red-500 dark:text-red-400">Post not found.</div>
   }
 
+  const wordCount = post.body.split(' ').length
+  const readTime = Math.ceil(wordCount / 200)
+
   return (
     <div className="max-w-2xl mx-auto p-6 text-gray-800 dark:text-gray-200">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
 
-      {/* Optional date display */}
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-        Posted on {new Date(post.date).toLocaleDateString('en-US', {
+        By {post.author} · {new Date(post.date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
           day: 'numeric'
-        })}
+        })} · {readTime} min read
       </p>
 
-      <p className="text-lg mb-8 leading-relaxed">
+      <p className="text-lg mb-8 leading-relaxed whitespace-pre-line">
         {post.body}
       </p>
 
