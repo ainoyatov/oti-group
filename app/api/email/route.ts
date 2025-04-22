@@ -27,7 +27,7 @@ export async function POST(request:NextRequest) {
     const from_email = process.env.GMAIL_EMAIL_FROM
 
     const mailOptions: Mail.Options = {
-        from: `New Client`,
+        from: `New Client OTI`,
         to: `${process.env.GMAIL_EMAIL_TWO}`,
         // cc: email, (uncomment this line if you want to send a copy to the sender)
         // subject: `${purpose}`,
