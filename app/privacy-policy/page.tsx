@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PrivacyPolicy = () => {
     return (
         <div className="flex flex-col p-2 md:p-8">
-            <div className="text-2xl md:text-3xl text-blue-500 flex w-full justify-center mb-4">Privacy Policy</div>
+            <div className="text-4xl md:text-5xl text-[#F5B429] font-bold flex w-full justify-center mb-4">Privacy Policy</div>
             <div className="font-bold mb-4">Privacy Policy Updated: 1/1/2025</div>
             <div className="font-bold mb-2">Messaging Privacy Policy</div>
             <div className="mb-2">
