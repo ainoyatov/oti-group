@@ -31,7 +31,7 @@ export async function POST(request:NextRequest) {
         to: `${process.env.GMAIL_EMAIL_TWO}`,
         // cc: email, (uncomment this line if you want to send a copy to the sender)
         // subject: `${purpose}`,
-        subject: `${full_name}`,
+        subject: `OTI: ${full_name}`,
         text: `
 Property Address: ${property_address},
 City: ${city},
