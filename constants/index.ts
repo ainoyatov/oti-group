@@ -1,8 +1,8 @@
 export const NavLinks = [
-    {href: "/about-us", label:"ABOUT"},
-    {href: "/appointment", label:"APPOINTMENT"},
-    {href: "/contact-us", label:"CONTACT"},
-    {href:"/how-it-works", label:"WORKFLOW"}
+    {href:"/about-us", label:"ABOUT"},
+    {href:"/blog", label:"BLOG"},
+    {href:"/appointment", label:"APPOINTMENT"},
+    {href:"/contact-us", label:"CONTACT"},
 ]
 
 export const FooterLinks = [
@@ -38,10 +38,11 @@ export const SocialLinks = [
 ]
 
 export const MobileMenuLinks = [
-    {href: "/about-us", label:"About"},
-    {href: "/appointment", label:"Appointment"},
-    {href: "/contact-us", label:"Contact"},
+    {href:"/about-us", label:"About"},
+    {href:"/blog", label:"Blog"},
     {href:"/how-it-works", label:"How it works"},
+    {href:"/appointment", label:"Appointment"},
+    {href:"/contact-us", label:"Contact"},
     {href:"/directions", label:"Directions"},
     {href:"/faq", label:"FAQ"},
 ]

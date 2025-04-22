@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { blogPosts } from "@/components/blog-posts/BlogData"
+import { blogPostsNew } from "@/components/blog-posts/BlogData"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPostsNew.find((p) => p.slug === slug)
 
   if (!post) {
     return {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPostsNew.find((p) => p.slug === slug)
 
   if (!post) {
     return <div className="text-center text-red-500 dark:text-red-400">Post not found.</div>
@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const wordCount = post.body.split(' ').length
   const readTime = Math.ceil(wordCount / 200)
 
-  const relatedPosts = blogPosts
+  const relatedPosts = blogPostsNew
   .filter((p) =>
     p.slug !== slug &&
     p.tags.some(tag => post.tags.includes(tag))

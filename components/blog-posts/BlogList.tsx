@@ -1,20 +1,28 @@
 'use client';
 
 import Link from "next/link";
-import { blogPosts } from "./BlogData";
+import { blogPostsNew } from "./BlogData";
 
 const BlogList = () => {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {blogPosts.map((post, index) => {
+      {blogPostsNew.map((post, index) => {
         const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
           day: 'numeric'
-        })
+        });
 
-        const wordCount = post.body.split(' ').length
-        const readTime = Math.ceil(wordCount / 200)
+        const wordCount = post.body.split(' ').length;
+        const readTime = Math.ceil(wordCount / 200);
+
+        const cleanedBody = post.body.replace(/\n/g, ' ') // remove newlines
+        const sentences = cleanedBody.split('. ').map(s => s.trim()).filter(Boolean)
+
+        const previewText =
+        sentences.length >= 2
+            ? `${sentences[0]}. ${sentences[1]}.`
+            : `${sentences[0]}.`
 
         return (
           <div key={post.slug} className="border rounded-xl p-4 hover:shadow-md transition bg-white dark:bg-gray-800 flex flex-col justify-between h-full">
@@ -32,7 +40,7 @@ const BlogList = () => {
               </div>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">{post.title}</h2>
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                {post.body.split('. ')[1] ? post.body.split('. ')[1] + '.' : post.body.split('. ')[0] + '.'}
+                {previewText}
               </p>
             </div>
             <Link href={`/blog/${post.slug}`}>
@@ -41,10 +49,10 @@ const BlogList = () => {
               </button>
             </Link>
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default BlogList
+export default BlogList;
