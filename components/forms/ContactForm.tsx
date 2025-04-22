@@ -134,7 +134,14 @@ const ContactForm = () => {
                         </div>
                         <div className="ms-2 text-[8px] text-slate-50 dark:text-gray-300">
                             <p className="text-xs text-gray-800">
-                                By submitting this request for information, I hereby agree to <a href="https://otinvestmentgroup.com/privacy-policy"><span className="font-bold">Terms Of Use and Privacy Policy </span></a>
+                                By submitting this request for information, I hereby agree to{' '}
+                                <a
+                                    href="https://otinvestmentgroup.com/privacy-policy"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span className="font-bold">Terms Of Use and Privacy Policy</span>
+                                </a>{' '}
                                 and consent to receive messages or calls via email, phone and or SMS. Standard Msg and Data Rates Apply.
                             </p>
                         </div>
