@@ -39,7 +39,7 @@ export const blogPostsNew = [
         slug: 'what-to-do-if-behind-mortgage-payments',
         author: 'Vince Chimoga',
         date: '2025-04-14T08:00:00Z',
-        tags: ['BehindMortgagePayments', 'tag2', 'tag3'],
+        tags: ['MortgageHelp', 'BehindMortgagePayments', 'SellMyHouseFast'],
         body: `
         Falling behind on mortgage payments can be overwhelming—but you do have options. Whether you're one month behind or facing foreclosure, taking quick action can help you protect your home and your equity.
         
@@ -67,7 +67,7 @@ export const blogPostsNew = [
         slug: 'can-i-sell-my-house-in-foreclosure',
         author: 'Vince Chimoga',
         date: '2025-04-15T08:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['LateMortagePayments', 'SellHouseWhileInForeclosure', 'ForeclosureHelp'],
         body: `
         Yes—you can absolutely sell your house while it’s in foreclosure. In fact, many homeowners in Dallas and the surrounding areas use this strategy to stop the foreclosure process, protect their credit, and walk away with cash in hand.
         
@@ -103,7 +103,7 @@ export const blogPostsNew = [
         slug: 'what-happens-to-equity-if-house-lost',
         author: 'Vince Chimoga',
         date: '2025-04-15T09:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['EquityImpactForLostHouse', 'HomeEquity', 'SellBeforeForeclosure'],
         body: `
         If you're facing foreclosure or a forced sale, one of the biggest concerns is: What happens to my equity? Equity is the value you own in your home after subtracting what you owe on the mortgage. Here’s how equity is treated in different loss scenarios—and how to protect it.
         
@@ -139,7 +139,7 @@ export const blogPostsNew = [
         slug: 'how-to-sell-house-with-back-taxes-or-liens',
         author: 'Vince Chimoga',
         date: '2025-04-16T10:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['SellHouseWithLiens', 'BackTaxesOnProperty', 'MortgageLiens'],
         body: `
         Selling a house with back taxes or liens can feel overwhelming, but it’s more common than you think—and definitely possible. In the Dallas-Fort Worth area and throughout Texas, many homeowners face this situation and still walk away with cash. Here's how to do it the smart way.
         
@@ -172,7 +172,7 @@ export const blogPostsNew = [
         slug: 'selling-an-inherited-house',
         author: 'Vince Chimoga',
         date: '2025-04-16T12:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['InheritedProperty', 'SellingInheritedHome', 'EstateSale'],
         body: `
         Inheriting a house comes with both emotional weight and legal responsibility. Whether you plan to keep or sell it, there are a few important steps to take—especially in Texas where probate laws and title issues can delay your timeline. Here's what you need to know if you inherited property in Dallas or anywhere within a 3-hour radius.
         
@@ -207,7 +207,7 @@ export const blogPostsNew = [
         slug: 'should-i-fix-house-before-selling',
         author: 'Vince Chimoga',
         date: '2025-04-17T07:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['SellHomeAsIs', 'FixOrSellAsIs', 'SellAsIs'],
         body: `
         If your house needs repairs, you're likely wondering: Should I fix it up or just sell it as-is? The answer depends on your timeline, budget, and how much risk you're willing to take. Here’s how to decide what's best for your situation in Dallas or surrounding areas.
         
@@ -244,7 +244,7 @@ export const blogPostsNew = [
         slug: 'how-to-sell-house-during-divorce',
         author: 'Vince Chimoga',
         date: '2025-04-17T11:30:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['SellHouseDuringDivorce', 'RealEstateInDivorce', 'DivorceHomeSellingTips'],
         body: `
         Divorce is stressful enough—add a home sale into the mix and it can feel overwhelming. But with the right strategy and support, selling a house during a divorce can go smoothly. Here’s what you need to know if you're going through a divorce in Dallas or surrounding North Texas cities.
         
@@ -278,7 +278,7 @@ export const blogPostsNew = [
         slug: 'what-are-cash-home-buyers',
         author: 'Vince Chimoga',
         date: '2025-04-18T08:00:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['CashHomeBuyers', 'CashHomeSale', 'FastCashForHouses'],
         body: `
         If you’ve seen signs or ads that say “We Buy Houses for Cash,” you might be wondering what cash home buyers actually do—and whether they’re legit. Here’s how cash buyers work, and how they can help you sell your home fast in Dallas and surrounding Texas cities.
         
@@ -321,7 +321,7 @@ export const blogPostsNew = [
         slug: 'is-selling-home-for-cash-a-scam',
         author: 'Vince Chimoga',
         date: '2025-04-18T09:00:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['AvoidCashSaleScams', 'HowToSellHouseSafely', 'SellingHouseForCash'],
         body: `
         Selling your house for cash can be a legitimate, stress-free solution—but it's also an industry that attracts scammers. If you're in Dallas or anywhere within a 3-hour radius, here's how to spot red flags and protect yourself when working with a cash buyer.
         
@@ -360,7 +360,7 @@ export const blogPostsNew = [
         slug: 'what-to-do-with-house-when-tenants-stop-paying-rent',
         author: 'Vince Chimoga',
         date: '2025-04-19T08:45:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['TenantNotPayingRent', 'SellingWithProblemTenants', 'SellingRentalProperty'],
         body: `
         Dealing with non-paying tenants is frustrating—especially when you’re ready to sell the property. If you're a landlord in Dallas, Fort Worth, or anywhere within a 3-hour radius, here’s what to do when your tenants stop paying rent and you’re thinking of selling.
         
@@ -401,7 +401,7 @@ export const blogPostsNew = [
         slug: 'can-you-sell-a-house-with-code-violations',
         author: 'Vince Chimoga',
         date: '2025-04-15T10:45:00Z',
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: ['SellHouseWithCodeViolations', 'SellHouseWithRepairsNeeded', 'SellAsIs'],
         body: `
         Yes—you absolutely can sell a house with code violations. Whether it's unpermitted work, structural issues, or a citation from the city, you still have options. Here's how to handle it if you're in Dallas, Fort Worth, or any nearby city within a 3-hour radius.
         
