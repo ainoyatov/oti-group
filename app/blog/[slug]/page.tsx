@@ -89,9 +89,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="border rounded-xl p-4 hover:shadow-md transition bg-white dark:bg-gray-800 flex flex-col justify-between h-full">
                   <div className="flex items-center gap-3 mb-2">
                     <img
-                      src={`https://i.pravatar.cc/40?img=${index + 4}`}
-                      alt="Author"
-                      className="w-10 h-10 rounded-full object-cover"
+                        src="/ceo.jpeg"
+                        // src={`https://i.pravatar.cc/40?img=${index + 4}`}
+                        alt="Author"
+                        className="w-10 h-10 rounded-full object-cover"
                     />
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       By {related.author} · {formattedDate} · {readTime} min read

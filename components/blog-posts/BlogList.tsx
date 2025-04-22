@@ -29,9 +29,10 @@ const BlogList = () => {
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <img
-                  src={`https://i.pravatar.cc/40?img=${index + 1}`}
-                  alt="Author"
-                  className="w-10 h-10 rounded-full object-cover"
+                    src="/ceo.jpeg"
+                    // src={`https://i.pravatar.cc/40?img=${index + 1}`}
+                    alt="Author"
+                    className="w-10 h-10 rounded-full object-cover"
                 />
                 <div className="flex flex-col text-sm text-gray-500 dark:text-gray-400">
                   <div>By {post.author}</div> 
