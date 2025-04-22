@@ -359,7 +359,7 @@ export const blogPostsNew = [
         title: `What to Do When Tenants Stop Paying Rent and You Want to Sell`,
         slug: 'what-to-do-with-house-when-tenants-stop-paying-rent',
         author: 'Vince Chimoga',
-        date: '2025-04-1908:45:00Z',
+        date: '2025-04-19T08:45:00Z',
         tags: ['tag1', 'tag2', 'tag3'],
         body: `
         Dealing with non-paying tenants is frustrating—especially when you’re ready to sell the property. If you're a landlord in Dallas, Fort Worth, or anywhere within a 3-hour radius, here’s what to do when your tenants stop paying rent and you’re thinking of selling.
