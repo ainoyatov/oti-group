@@ -7,7 +7,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: 'Sell My House Fast - OT Investment Group',
-  description: '',
+  description: 'Buy Sell Homes, Sell my house cash, Need to sell fast, Need help with mortgage, How to sell my house fast, What is the fastest I can sell my house, How soon can the bank take my home',
   robots: {
     follow: true,
     index: true
