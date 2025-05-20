@@ -1,117 +1,127 @@
-import { Metadata } from "next"
-import Link from "next/link"
-import { blogPostsNew } from "@/components/blog-posts/BlogData"
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const post = blogPostsNew.find((p) => p.slug === slug)
-
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-      description: 'This blog post could not be found.',
-    }
-  }
-
-  return {
-    title: post.title,
-    description: post.body,
-    robots: {
-      follow: true,
-      index: true
-    }
-  }
-}
+import { fetchPostBySlug } from "../../../lib/contentful/contentful";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
+import Image from "next/image";
+import Link from "next/link";
+import type { Entry, Asset } from "contentful";
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = blogPostsNew.find((p) => p.slug === slug)
+  const { slug } = await params;
+  const post = await fetchPostBySlug(slug);
 
-  if (!post) {
-    return <div className="text-center text-red-500 dark:text-red-400">Post not found.</div>
-  }
+  if (!post) return <div className="text-center text-red-500">Post not found</div>;
 
-  const wordCount = post.body.split(' ').length
-  const readTime = Math.ceil(wordCount / 200)
+  const fields = (post as Entry<any>).fields;
+  
+  const {
+    title,
+    subtitle,
+    publishedDate,
+    bodyText,
+    featuredImage,
+    author,
+    relatedBlogPosts,
+  } = fields;
 
-  const relatedPosts = blogPostsNew
-  .filter((p) =>
-    p.slug !== slug &&
-    p.tags.some(tag => post.tags.includes(tag))
-  )
-  .slice(0, 2) // pick 2 most related
+  const authorFields = (author as Entry<any>)?.fields;
+  const authorName = String(authorFields?.name || "Unknown Author");
+  const authorAvatar = (authorFields?.avatar as Asset)?.fields?.file?.url;
+  const imageUrl = (featuredImage as Asset)?.fields?.file?.url;
 
   return (
-    <div className="max-w-2xl mx-auto p-6 text-gray-800 dark:text-gray-200">
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+    <article className="max-w-3xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold mb-2">{String(title)}</h1>
 
-      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-        By {post.author} · {new Date(post.date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric'
-        })} · {readTime} min read
-      </p>
-
-      <p className="text-lg mb-4 leading-relaxed whitespace-pre-line">
-        {post.body}
-      </p>
-
-      <div className="mb-8 flex flex-wrap gap-2">
-        {post.tags.map(tag => (
-          <span key={tag} className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
-            #{tag}
-          </span>
-        ))}
+      <div className="text-sm text-gray-500 mb-6 flex items-center gap-3">
+        {authorAvatar && (
+          <Image
+            src={`https:${authorAvatar}`}
+            alt={authorName}
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
+        )}
+        <span>
+          By {authorName} • {new Date(String(publishedDate)).toLocaleDateString()} • 3 min read
+        </span>
       </div>
 
-      <Link href="/blog">
-        <button className="px-4 py-2 bg-gray-200 dark:bg-gray-700 dark:text-white text-gray-900 hover:bg-gray-300 dark:hover:bg-gray-600 rounded transition">
-          ← Back to Blog
-        </button>
-      </Link>
+      {subtitle && <p className="italic text-gray-600 mb-6">{String(subtitle)}</p>}
 
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Related Articles</h3>
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-          {relatedPosts.map((related, index) => {
-            const formattedDate = new Date(related.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric'
-            })
-
-            const wordCount = related.body.split(' ').length
-            const readTime = Math.ceil(wordCount / 200)
-
-            return (
-              <Link href={`/blog/${related.slug}`} key={related.slug}>
-                <div className="border rounded-xl p-4 hover:shadow-md transition bg-white dark:bg-gray-800 flex flex-col justify-between h-full">
-                  <div className="flex items-center gap-3 mb-2">
-                    <img
-                        src="/ceo.jpeg"
-                        // src={`https://i.pravatar.cc/40?img=${index + 4}`}
-                        alt="Author"
-                        className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      By {related.author} · {formattedDate} · {readTime} min read
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{related.title}</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                    {related.body.split('. ')[1] ? related.body.split('. ')[1] + '.' : related.body.split('. ')[0] + '.'}
-                  </p>
-                  <button className="mt-auto px-4 py-2 bg-[#F5B429] text-white rounded hover:bg-[#e2a821] transition w-fit">
-                    Read More →
-                  </button>
-                </div>
-              </Link>
-            )
-          })}
+      {imageUrl && (
+        <div className="mb-6">
+          <Image
+            src={`https:${imageUrl}`}
+            alt={String(title)}
+            width={800}
+            height={500}
+            className="rounded-lg"
+          />
         </div>
+      )}
+
+      <div className="prose max-w-none mb-12 prose-p:mb-4 space-y-2">
+        {documentToReactComponents(bodyText as Document)}
       </div>
 
-    </div>
-  )
+      <div className="mb-12">
+        <Link href="/blog">
+          <button className="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+            ← Back to Blog
+          </button>
+        </Link>
+      </div>
+
+      {Array.isArray(relatedBlogPosts) && relatedBlogPosts.length > 0 && (
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Related Articles</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            {relatedBlogPosts.map((rel: any) => {
+              const relFields = (rel as Entry<any>).fields;
+              const relTitle = String(relFields.title);
+              const relSlug = String(relFields.slug);
+              const relSubtitle = String(relFields.subtitle || "");
+              const relAuthorFields = (relFields.author as Entry<any>)?.fields;
+              const relAuthorName = String(relAuthorFields?.name || "Unknown Author");
+              const relAuthorAvatar = (relAuthorFields?.avatar as Asset)?.fields?.file?.url;
+              const relDate = new Date(String(relFields.publishedDate)).toLocaleDateString();
+
+              return (
+                <div
+                  key={rel.sys.id}
+                  className="border rounded-xl p-6 shadow-sm hover:shadow-md transition duration-200"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    {relAuthorAvatar && (
+                      <Image
+                        src={`https:${relAuthorAvatar}`}
+                        alt={relAuthorName}
+                        width={24}
+                        height={24}
+                        className="rounded-full"
+                      />
+                    )}
+                    <p className="text-sm text-gray-500">
+                      By {relAuthorName} • {relDate} • 3 min read
+                    </p>
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">{relTitle}</h4>
+                  {relSubtitle && <p className="text-gray-600 text-sm mb-4">{relSubtitle}</p>}
+                  <Link
+                    href={`/blog/${relSlug}`}
+                    className="inline-block mt-auto text-yellow-600 font-medium hover:underline"
+                  >
+                    <div className="bg-yellow-400 text-white px-4 py-2 rounded-md inline-flex items-center">
+                      Read More →
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </article>
+  );
 }
