@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Entry, Asset } from "contentful";
 
+export const revalidate = 30;
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await fetchPostBySlug(slug);
@@ -67,7 +69,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <div className="mb-12">
         <Link href="/blog">
-          <button className="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+          <button className="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 dark:bg-gray-500">
             ← Back to Blog
           </button>
         </Link>

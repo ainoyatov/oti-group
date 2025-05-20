@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Entry, Asset } from "contentful";
 
+export const revalidate = 30;
+
 export default async function BlogPage() {
   const posts = await fetchEntries();
 
