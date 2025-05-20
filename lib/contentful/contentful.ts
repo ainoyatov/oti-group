@@ -12,15 +12,15 @@ export async function fetchEntries() {
   
 export async function fetchPostBySlug(slug: string) {
     const entries = await client.getEntries({
-    content_type: 'realtyBlog',
-    'fields.slug': slug,
-    include: 2, // 👈 This includes referenced entries (e.g., SEO and Author)
-    limit: 1,
+        content_type: 'realtyBlog',
+        'fields.slug': slug,
+        include: 2, // 👈 This includes referenced entries (e.g., SEO and Author)
+        limit: 1,
     })
 
     if (!entries.items.length) {
-    console.warn(`No blog post found for slug: ${slug}`)
-    return null
+        console.warn(`No blog post found for slug: ${slug}`)
+        return null
     }
 
     return entries.items[0]
