@@ -31,7 +31,7 @@ const FourthDiv = () => {
         </div>
 
         <div className="text-center leading-loose lg:max-w-[1000px] px-2">
-            We are committed to providing top-tier service to every customer. You can trust OT Investment Group to give you the BEST offer to purchase your house.
+            We are committed to providing top-tier service to every customer. You can trust OT Home Buyers to give you the BEST offer to purchase your house.
         </div>
 
         <ThreeReasons />

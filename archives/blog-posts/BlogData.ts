@@ -193,7 +193,7 @@ export const blogPostsNew = [
         If multiple people inherited the property, you’ll need agreement from all parties. An investor can help mediate if needed or buy out individual shares.
         
         Step 5: Sell to a Local Buyer Who Understands Probate Sales
-        In Dallas-Fort Worth and surrounding areas, real estate investors like OT Investment Group can help:
+        In Dallas-Fort Worth and surrounding areas, real estate investors like OT Home Buyers can help:
         Navigate probate timelines
         Handle paperwork
         Buy as-is and close in days
@@ -309,7 +309,7 @@ export const blogPostsNew = [
         
         What to Watch Out For?
         Avoid low-ballers who pressure you.
-        Check reviews and look for local buyers like OT Investment Group.
+        Check reviews and look for local buyers like OT Home Buyers.
         Make sure there’s a clear contract and title process.
         
         Final Tip:
@@ -345,7 +345,7 @@ export const blogPostsNew = [
         Get everything in writing before signing
         Real Cash Buyers in Dallas-Fort Worth
         
-        A local buyer like OT Investment Group will:
+        A local buyer like OT Home Buyers will:
         Provide a written offer
         Answer all your questions up front
         Let you pick the closing date
@@ -422,7 +422,7 @@ export const blogPostsNew = [
         You’re legally required to disclose known code violations. A traditional buyer might back out—but a local investor will typically factor it into their offer and move forward.
         
         Step 4: Sell to a Cash Buyer Who Handles Code Violations
-        In Dallas-Fort Worth, real estate investors like OT Investment Group buy homes with code issues all the time. They:
+        In Dallas-Fort Worth, real estate investors like OT Home Buyers buy homes with code issues all the time. They:
         Buy as-is with violations still open
         Handle the paperwork and pay fines at closing
         Close quickly, often in less than 10 days

@@ -6,7 +6,7 @@ import ThirdDiv from "@/components/main-page/ThirdDiv";
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Sell My House Fast - OT Investment Group',
+  title: 'Sell My House Fast - OT Home Buyers',
   description: 'Buy Sell Homes, Sell my house cash, Need to sell fast, Need help with mortgage, How to sell my house fast, What is the fastest I can sell my house, How soon can the bank take my home',
   robots: {
     follow: true,

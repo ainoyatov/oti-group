@@ -3,7 +3,7 @@ import {Icon} from '@iconify/react'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'sell my house fast Dallas, best home investors in Dallas, honest home buyers, tailored real estate solutions, stress-free home selling, OT Investment Group mission, foreclosure help Dallas TX, property management solutions, quick cash offer for house Dallas, best cash home buyers in Dallas, who pays the most for houses in Dallas, cash home buyers Dallas, we buy houses Dallas TX, sell my house as-is Dallas, best way to sell my home without hassle Dallas, experienced home buyers Dallas, top-rated house buyers in Texas, local home buyers Dallas, sell my house to an investor, professional cash home buyers',
+  description: 'sell my house fast Dallas, best home investors in Dallas, honest home buyers, tailored real estate solutions, stress-free home selling, OT Home Buyers mission, foreclosure help Dallas TX, property management solutions, quick cash offer for house Dallas, best cash home buyers in Dallas, who pays the most for houses in Dallas, cash home buyers Dallas, we buy houses Dallas TX, sell my house as-is Dallas, best way to sell my home without hassle Dallas, experienced home buyers Dallas, top-rated house buyers in Texas, local home buyers Dallas, sell my house to an investor, professional cash home buyers',
   robots: {
     follow: true,
     index: true
@@ -23,7 +23,7 @@ export default function AboutSection() {
             We are a <span className="font-semibold">family-owned business</span> committed to helping
             homeowners sell their properties with ease and confidence. Whether you're facing foreclosure,
             tired of managing the property, or simply ready to move on for any reason —{" "}
-            <span className="text-[#F5B429] font-medium">OT Investment Group Properties</span> is here to help.
+            <span className="text-[#F5B429] font-medium">OT Home Buyers Properties</span> is here to help.
           </p>
           <p className="text-lg leading-relaxed mt-4">
             Our team is dedicated to offering honest guidance and tailored solutions that fit your unique
@@ -46,7 +46,7 @@ export default function AboutSection() {
           </p>
 
           <div className="pt-8">
-            <a href="mailto:vince@otinvestmentsgroup.com">
+            <a href="mailto:info@othomebuyers.com">
               <button className="flex flex-row p-2 px-4 gap-2 text-xl items-center cursor-pointer transition-transform transform hover:scale-125 active:scale-125 bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md shadow-2xl">
                 <Icon icon="mdi:email" width={24} height={24} />
                 <div>Contact us today</div>

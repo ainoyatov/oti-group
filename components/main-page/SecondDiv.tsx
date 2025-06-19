@@ -40,7 +40,7 @@ const SecondDiv = () => {
 
           <ThreeEasySteps />
 
-          <a href="mailto:vince@otinvestmentsgroup.com">
+          <a href="mailto:info@othomebuyers.com">
             <button className="flex flex-row p-2 px-4 gap-2 text-xl items-center cursor-pointer max-lg:hidden transition-transform transform hover:scale-125 active:scale-125 bg-[#F5B429] text-white hover:bg-orange-500 active:bg-orange-500 rounded-md shadow-2xl">
               <Icon icon="mdi:email" width={24} height={24} />
               <div>Send email</div>

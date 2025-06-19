@@ -17,7 +17,7 @@ const CalendlyFormBooking = () => {
   
         <div className='p-4 flex lg:justify-center w-screen h-screen'>
           <InlineWidget 
-            url="https://calendly.com/vince-otinvestmentsgroup/30min"
+            url="https://calendly.com/othomebuyers/30min"
             styles={{
               height: '100%', 
               width: '100%',

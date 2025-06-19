@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
             <div className="font-bold mb-4">Privacy Policy Updated: 1/1/2025</div>
             <div className="font-bold mb-2">Messaging Privacy Policy</div>
             <div className="mb-2">
-                This Messaging Program Privacy Policy explains how OT Investment Group collects 
+                This Messaging Program Privacy Policy explains how OT Home Buyers collects 
                 and uses information about you in relation to its text message marketing program 
                 (the “Messaging Service”). We use a third-party service called Launch Control to 
                 provide the Messaging Service to you. For the purposes of the Messaging Service, 
@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
                 Service Providers. We may share your information with third parties to help us provide the Messaging Service to you.
             </div>
             <div className="mb-2">
-                Legal Requirement and Protection of OT Investment Group and Others We may disclose your information as we believe 
+                Legal Requirement and Protection of OT Home Buyers and Others We may disclose your information as we believe 
                 such disclosure is necessary or appropriate to: (i) comply with applicable law and legal processes; (ii) respond to 
                 requests from public and government authorities, including public and government authorities outside your country of 
                 residence; (iii) enforce a contract with us; (iv) protect our rights, privacy, safety, or property, and/or that of our 
@@ -108,10 +108,10 @@ const PrivacyPolicy = () => {
             </div>
             <div className="font-bold mb-2">Contact us</div>
             <div className="mb-2">
-                If you have any questions, concerns, or requests related to this Privacy Policy, please contact us at vince@otinvestmentsgroup.com
+                If you have any questions, concerns, or requests related to this Privacy Policy, please contact us at info@othomebuyers.com
             </div>
             <div className="mb-2">
-                OT Investment Group policies are subject to change at any time with or without notice.
+                OT Home Buyers policies are subject to change at any time with or without notice.
             </div>
 
         </div>
