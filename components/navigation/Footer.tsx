@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="flex flex-col justified-start items-start gap-2 cursor-pointer">
                     <a href="/">
                         <Image 
-                            src='/ot_investment_dark_mode.svg'
+                            src='/dark_mode_hb_logo.svg'
                             alt="logo"
                             width={150}
                             height={35}

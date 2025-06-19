@@ -26,14 +26,14 @@ export default function TopMenu() {
                         <a className='flex' href='/'>
                             <>
                                 <Image
-                                    src="/ot_investment_light_mode.svg"
+                                    src="/light_mode_hb_logo.svg"
                                     alt="main logo"
                                     width={150}
                                     height={1}
                                     className="block dark:hidden"
                                 />
                                 <Image
-                                    src="/ot_investment_dark_mode.svg"
+                                    src="/dark_mode_hb_logo.svg"
                                     alt="main logo dark"
                                     width={150}
                                     height={1}

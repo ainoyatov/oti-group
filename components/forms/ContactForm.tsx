@@ -136,7 +136,7 @@ const ContactForm = () => {
                             <p className="text-xs text-gray-800">
                                 By submitting this request for information, I hereby agree to{' '}
                                 <a
-                                    href="https://otinvestmentgroup.com/privacy-policy"
+                                    href="https://othomebuyers.com/privacy-policy"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

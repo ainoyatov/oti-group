@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 const {SITE_NAME} = process.env
 
-const baseUrl = "https://otinvestmentgroup.com"
+const baseUrl = "https://othomebuyers.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
