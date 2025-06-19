@@ -7,7 +7,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: 'Sell My House Fast - OT Home Buyers',
-  description: 'Buy Sell Homes, Sell my house cash, Need to sell fast, Need help with mortgage, How to sell my house fast, What is the fastest I can sell my house, How soon can the bank take my home',
+  description: 'Sell your house fast in Dallas–Fort Worth, even with back taxes or code violations. OT Home Buyers pays cash for homes as-is with no repairs, fees, or delays.',
   robots: {
     follow: true,
     index: true
