@@ -1,5 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import { Metadata } from "next"
+import ResendForm from "@/components/forms/ResendForm"
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -24,6 +25,7 @@ const ContactUs = () => {
 
       <div className='p-4 flex lg:justify-center '>
         <ContactForm />
+        <ResendForm />
       </div>
     </div>
   )
