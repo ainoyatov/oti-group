@@ -25,6 +25,7 @@ const ContactUs = () => {
 
       <div className='p-4 flex lg:justify-center '>
         <ContactForm />
+        
         <ResendForm />
       </div>
     </div>
