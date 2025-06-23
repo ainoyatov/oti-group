@@ -72,24 +72,53 @@ const ContactForm = () => {
     };
 
     const activeStyle = 'shadow-[inset_0_0_0_1000px_#bfdbfe] dark:shadow-[inset_0_0_0_1000px_#faffbd]';
-    const baseStyle = 'w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300';
+    const baseStyle = 'w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-500';
 
     const isButtonEnabled = captcha && agreedToTOS;
 
     return (
         <form action={FormAction}>
             <div className="flex-1 flex justify-center p-4">
-                <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-primary dark:bg-slate-500 bg-opacity-70">
+                <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70 nest-hub-fix ">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                         Get Free No-Obligation Offer Now!
                     </h2>
                     <div className="space-y-4">
-                        <input type="text" name="address" placeholder="Property Address" className="w-full p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
+                        <input
+                            type="text"
+                            name="address"
+                            placeholder="Property Address"
+                            value={state.address || ''}
+                            onChange={handleChange}
+                            className={`${baseStyle} ${state.address ? activeStyle : ''}`}
+                        />
                         <div className="flex space-x-2">
-                            <input type="text" name="city" placeholder="City" className="w-1/3 p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
-                            <input type="text" name="state" placeholder="State" className="w-1/3 p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
-                            <input type="text" name="zipcode" placeholder="Zipcode" className="w-1/3 p-3 rounded-md bg-white bg-opacity-50 border border-gray-300 text-black placeholder-gray-600" />
+                        <input
+                            type="text"
+                            name="city"
+                            placeholder="City"
+                            value={state.city || ''}
+                            onChange={handleChange}
+                            className={`w-1/3 ${baseStyle} ${state.city ? activeStyle : ''}`}
+                        />
+                        <input
+                            type="text"
+                            name="state"
+                            placeholder="State"
+                            value={state.state || ''}
+                            onChange={handleChange}
+                            className={`w-1/3 ${baseStyle} ${state.state ? activeStyle : ''}`}
+                        />
+                        <input
+                            type="text"
+                            name="zipcode"
+                            placeholder="Zipcode"
+                            value={state.zipcode || ''}
+                            onChange={handleChange}
+                            className={`w-1/3 ${baseStyle} ${state.zipcode ? activeStyle : ''}`}
+                        />
                         </div>
+
                         <input
                             type="text"
                             name="name"
@@ -123,7 +152,7 @@ const ContactForm = () => {
                         />
 
                         <div className="mt-4">
-                            <ReCAPTCHA 
+                            <ReCAPTCHA
                                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE!}
                                 className="w-full mt-4"
                                 onChange={setCaptcha}
@@ -133,9 +162,9 @@ const ContactForm = () => {
                         <div className="py-2">
                             <button
                                 disabled={!isButtonEnabled}
-                                type="submit" 
+                                type="submit"
                                 className={`w-full p-3 rounded-md text-white font-bold transition ${
-                                    isButtonEnabled ? 'bg-black hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'
+                                isButtonEnabled ? 'bg-black hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'
                                 }`}
                             >
                                 <p>Get Cash Offer</p>
@@ -148,21 +177,21 @@ const ContactForm = () => {
                                     type="checkbox"
                                     name="tos-checkbox"
                                     checked={agreedToTOS}
-                                    onChange={() => setAgreedToTOS(prev => !prev)}
+                                    onChange={() => setAgreedToTOS((prev) => !prev)}
                                     className="w-3 h-3 border border-gray-300 bg-gray-50 focus:ring-3 focus:ring-cyan-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-cyan-600 dark:ring-offset-gray-800"
                                 />
                             </div>
                             <div className="ms-2 text-[8px] text-slate-50 dark:text-gray-300">
                                 <p className="text-xs text-gray-800">
                                     By submitting this request for information, I hereby agree to{' '}
-                                    <a
-                                        href="https://othomebuyers.com/privacy-policy"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <span className="font-bold">Terms Of Use and Privacy Policy</span>
-                                    </a>{' '}
-                                    and consent to receive messages or calls via email, phone and or SMS. Standard Msg and Data Rates Apply.
+                                <a
+                                    href="https://othomebuyers.com/privacy-policy"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span className="font-bold">Terms Of Use and Privacy Policy</span>
+                                </a>{' '}
+                                and consent to receive messages or calls via email, phone and or SMS. Standard Msg and Data Rates Apply.
                                 </p>
                             </div>
                         </div>

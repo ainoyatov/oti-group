@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {Icon} from '@iconify/react'
-import ContactForm from "../forms/ContactForm";
+import ResendForm from "@/components/forms/ResendForm"
 
 const FirstDiv = () => {
   return (
@@ -49,7 +49,7 @@ const FirstDiv = () => {
                 </div>
 
                 {/* Right Column: Contact Form */}
-                <ContactForm />
+                <ResendForm />
             </div>
         </div>
     </div>
