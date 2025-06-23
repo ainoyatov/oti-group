@@ -1,4 +1,4 @@
-import ContactForm from "@/components/forms/ContactForm"
+import ResendForm from "@/components/forms/ResendForm"
 import FaqForm from "@/components/forms/FaqForm"
 import { Metadata } from "next"
 
@@ -27,7 +27,7 @@ const FAQ = () => {
         </div>
       </div>
 
-      <ContactForm />
+      <ResendForm />
       
     </div>
   )

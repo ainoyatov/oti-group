@@ -1,4 +1,4 @@
-import ContactForm from "@/components/forms/ContactForm"
+import ResendForm from "@/components/forms/ResendForm"
 import { Metadata } from "next"
 import Image from "next/image"
 
@@ -41,7 +41,7 @@ const HowItWorks = () => {
           </div>
         </div>
         <div className="flex justify-center py-6 md:py-16">
-          <ContactForm />
+          <ResendForm />
         </div>
     </div>
   )
