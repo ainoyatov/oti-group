@@ -1,6 +1,6 @@
 'use client';
 
-import { sendEmail } from "@/lib/sendEmail";
+import { sendEmail } from "@/archives/sendEmail";
 import { useState } from "react";
 import ReCAPTCHA from 'react-google-recaptcha';
 
