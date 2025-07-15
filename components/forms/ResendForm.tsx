@@ -63,7 +63,6 @@ const ContactForm = () => {
         const { success, message } = await sendMail.json();
 
         if (success) {
-            setState({});
             alert(message);
             window.location.reload();
         } else {
