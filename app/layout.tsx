@@ -14,22 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const {SITE_NAME} = process.env
-
-const baseUrl = "https://othomebuyers.com"
-
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   title: {
-    default: SITE_NAME!,
-    template: `%s | ${SITE_NAME}`
+    default: process.env.NEXT_PUBLIC_SITE_NAME!,
+    template: `%s | ${process.env.NEXT_PUBLIC_SITE_NAME!}`,
   },
-  description: "Sell your house fast in Dallas–Fort Worth, even with back taxes or code violations. OT Home Buyers pays cash for homes as-is with no repairs, fees, or delays.",
+  description:
+    "Sell your house fast in Dallas-Fort Worth, even with back taxes or code violations. OT Home Buyers pays cash for homes as-is with no repairs, fees, or delays.",
   robots: {
     follow: true,
-    index: true
-  }
-
+    index: true,
+  },
 };
 
 export default function RootLayout({
