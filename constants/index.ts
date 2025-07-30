@@ -31,10 +31,10 @@ export const SocialLinks = [
     {
         title: "SOCIALS",
         links: [
-            { href: "https://www.instagram.com/vincechimoga?igsh=MTJ4c3hxcnZjb2VleA%3D%3D&utm_source=qr", label: "Instagram" },
-            { href: "https://www.tiktok.com/@vincechimoga?_t=ZP-8uwD6xBPaT0&_r=1", label: "TikTok" },
-            { href: "https://www.facebook.com/share/164LWqgT27/?mibextid=wwXIfr", label: "Facebook" },
-            { href: "https://youtube.com/@vincechimoga?si=j-81CEQuDel1rvHk", label: "YouTube" }
+            { href: "https://www.instagram.com/othomebuyers/", label: "Instagram" },
+            { href: "https://www.facebook.com/othomebuyers/", label: "Facebook" },
+            { href: "https://www.youtube.com/@othomebuyerstv", label: "YouTube" },
+            { href: "https://www.linkedin.com/company/othomebuyers/", label: "LinkedIn" }
         ]
     }
 ]

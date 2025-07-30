@@ -2,8 +2,19 @@ import { fetchAllBlogPosts } from "@/lib/contentful/contentful";
 import Link from "next/link";
 import Image from "next/image";
 import type { Entry, Asset } from "contentful";
+import { Metadata } from "next";
 
 export const revalidate = 30;
+
+export const metadata: Metadata = {
+  title: "Real Estate Tips & Insights",
+  description:
+    "Discover expert advice, market updates, and home selling tips. Stay informed with the OT Home Buyers real estate blog.",
+  robots: {
+    follow: true,
+    index: true,
+  },
+};
 
 export default async function BlogPage() {
   const { posts } = await fetchAllBlogPosts();
@@ -62,7 +73,7 @@ export default async function BlogPage() {
               </div>
               <h2 className="text-xl font-semibold mb-2">{String(title)}</h2>
               {subtitle && (
-                <p className="text-gray-300 text-sm mb-4">{String(subtitle)}</p>
+                <p className="text-gray-500 text-sm mb-4">{String(subtitle)}</p>
               )}
               <Link
                 href={`/blog/${String(slug)}`}

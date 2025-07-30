@@ -51,7 +51,7 @@ export default async function LocationsPage() {
 
               <h2 className="text-xl font-semibold mb-2">{title}</h2>
               {metaDescription && (
-                <p className="text-gray-300 text-sm mb-4">{metaDescription}</p>
+                <p className="text-gray-500 text-sm mb-4">{metaDescription}</p>
               )}
               <Link
                 href={`/locations/${slug}`}

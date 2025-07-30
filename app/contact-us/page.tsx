@@ -1,14 +1,15 @@
-import { Metadata } from "next"
-import ResendForm from "@/components/forms/ResendForm"
+import { Metadata } from "next";
+import ResendForm from "@/components/forms/ResendForm";
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'contact OT Home Buyers, Dallas home buyers contact, property selling inquiries, real estate assistance Dallas, homeowner support, get in touch with OT Home Buyers, sell my house contact, foreclosure help contact, property solutions inquiry, Dallas property buyers contact, home cash offer in 24 hours Dallas, what’s the best way to sell my home without hassle Dallas, behind on mortgage payments Dallas, how to sell my home before relocating Dallas, avoid foreclosure fast Dallas, mortgage default solutions Dallas, sell house in foreclosure fast Dallas, sell my house online fast Dallas, house buying companies near me Dallas, sell my home without a realtor contact, immediate home sale assistance Dallas',
+  title: "Contact OT Home Buyers | Get in Touch Today",
+  description:
+    "Have questions about selling your home? Call, email, or message OT Home Buyers for quick support and reliable assistance.",
   robots: {
     follow: true,
-    index: true
+    index: true,
   },
-}
+};
 
 const ContactUs = () => {
   return (
@@ -22,11 +23,11 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div className='p-4 flex lg:justify-center '>
+      <div className="p-4 flex lg:justify-center ">
         <ResendForm />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ContactUs;
