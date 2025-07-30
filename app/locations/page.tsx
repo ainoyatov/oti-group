@@ -16,6 +16,9 @@ export const metadata: Metadata = {
       "Find our locations and services in your area. We serve multiple cities and regions.",
     type: "website",
   },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/locations/`,
+  },
 };
 
 export default async function LocationsPage() {

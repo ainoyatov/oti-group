@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     follow: true,
     index: true,
   },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/`,
+  },
 };
 
 export default async function BlogPage() {
