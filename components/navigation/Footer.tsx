@@ -7,8 +7,15 @@ const Footer = () => {
   const tosYear = new Date().getFullYear();
 
   return (
-    <footer className="flex relative border-t border-gray-100 bg-[url('/footer-bg.jpg')] bg-cover bg-center">
-      <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-12 px-6 py-10 bg-gray-900/80 w-full">
+    <footer className="flex relative border-t border-gray-100 bg-cover bg-center">
+      <Image
+        src="/footer-bg.webp"
+        alt="Main Home"
+        layout="fill"
+        objectFit="cover"
+        className="z-0"
+      />
+      <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-12 px-6 py-10 bg-gray-900/80 w-full z-10">
         <div className="flex flex-col justified-start items-start gap-2 cursor-pointer">
           <a href="/">
             <Image

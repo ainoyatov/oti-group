@@ -1,18 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-  
+
   images: {
-    unoptimized: true,
+    formats: ['image/webp'],
     remotePatterns: [
-        {
-            protocol: 'https',
-            hostname: 'lh3.googleusercontent.com',
-            port: '',
-            pathname: '/a*/**'
-        }
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+        pathname: '/a*/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/**'
+      }
     ]
   }
 

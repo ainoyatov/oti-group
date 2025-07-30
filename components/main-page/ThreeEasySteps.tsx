@@ -5,17 +5,17 @@ export default function ThreeEasySteps() {
     {
       img: "/loving-home-icon.png",
       title: "REACH OUT",
-      text: "Fill out the form online, call or text us, and we’ll collect your property details.",
+      text: "Fill out the form online, call or text us, and we&apos;ll collect your property details.",
     },
     {
       img: "/new_contact-icon.jpg",
       title: "RECEIVE YOUR OFFER",
-      text: "We’ll review your property details and provide you with a fair cash offer or other options that best suit your situation.",
+      text: "We&apos;ll review your property details and provide you with a fair cash offer or other options that best suit your situation.",
     },
     {
       img: "/money-icon.jpg",
       title: "GET YOUR FUNDS",
-      text: "We’ll close the deal quickly and ensure you get paid, so you can move forward with your life.",
+      text: "We&apos;ll close the deal quickly and ensure you get paid, so you can move forward with your life.",
     },
   ];
 
@@ -36,7 +36,9 @@ export default function ThreeEasySteps() {
           />
 
           {/* Title */}
-          <h3 className="text-xl font-semibold dark:text-gray-800">{card.title}</h3>
+          <h3 className="text-xl font-semibold dark:text-gray-800">
+            {card.title}
+          </h3>
 
           {/* Text */}
           <p className="text-gray-600 mt-2">{card.text}</p>
