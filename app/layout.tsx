@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   title: {
     default: process.env.NEXT_PUBLIC_SITE_NAME!,
-    template: `%s | ${process.env.NEXT_PUBLIC_SITE_NAME!}`,
+    // template: `%s | ${process.env.NEXT_PUBLIC_SITE_NAME!}`,
+    template: `%s`,
   },
   description:
     "Sell your house fast in Dallas-Fort Worth, even with back taxes or code violations. OT Home Buyers pays cash for homes as-is with no repairs, fees, or delays.",
