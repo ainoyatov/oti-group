@@ -17,7 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${baseUrl}/blog`,
             lastModified: new Date(),
             changeFrequency: 'daily',
-            priority: 0.8,
+            priority: 0.9,
         },
         {
             url: `${baseUrl}/locations`,
@@ -28,16 +28,45 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: `${baseUrl}/about`,
             lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.6,
+            changeFrequency: 'yearly',
+            priority: 0.5,
         },
         {
-            url: `${baseUrl}/contact`,
+            url: `${baseUrl}/contact-us`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/appointment`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/how-it-works`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.4,
+        },
+        {
+            url: `${baseUrl}/faq`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,
         },
-        // Add more static routes as needed
+        {
+            url: `${baseUrl}/directions`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
+        {
+            url: `${baseUrl}/privacy-policy`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        }
     ]
 
     // Fetch dynamic blog posts using the utility function
