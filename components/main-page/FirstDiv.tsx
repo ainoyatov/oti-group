@@ -19,8 +19,9 @@ const FirstDiv = () => {
           {/* Left Column: Text Content */}
           <div className="flex-1 flex flex-col justify-center items-center md:items-start text-white p-2 sm:p-4">
             <div className="flex flex-col text-white text-5xl lg:text-[56px] xl:text-7xl font-bold">
-              <h2>Sell Your House</h2>
-              <h2>Fast For Cash!</h2>
+              <h1>
+                Sell Your House <br /> Fast For Cash!
+              </h1>
             </div>
             <div className=" flex flex-col mt-6 m-2 text-xl lg:text-3xl max-w-lg font-medium">
               <div className="flex flex-row place-items-center space-x-2">
