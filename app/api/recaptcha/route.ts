@@ -34,11 +34,11 @@ export async function POST(request: NextRequest) {
 //     const response = await fetch(url)
 //         .then((res) => res.json())
 //             .then((google_response) => {if (google_response.success == true) {
-//                 return true;  
+//                 return true;
 //             } else {
 //                 return false;
 //             }
 //         })
 //     return NextResponse.json({response})
-    
+
 // }

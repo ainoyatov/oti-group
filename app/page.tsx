@@ -3,19 +3,22 @@ import FirstDiv from "@/components/main-page/FirstDiv";
 import FourthDiv from "@/components/main-page/FourthDiv";
 import SecondDiv from "@/components/main-page/SecondDiv";
 import ThirdDiv from "@/components/main-page/ThirdDiv";
-import { Metadata } from "next"
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Sell My House Fast - OT Home Buyers',
-  description: 'Sell your house fast in Dallas–Fort Worth, even with back taxes or code violations. OT Home Buyers pays cash for homes as-is with no repairs, fees, or delays.',
+  title: "Sell Your Home Fast | Trusted Cash Home Buyers",
+  description:
+    "Get a fair cash offer for your home today. No fees, no repairs—just a fast, stress-free sale process from OT Home Buyers.",
   robots: {
     follow: true,
-    index: true
+    index: true,
   },
-}
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_BASE_URL,
+  },
+};
 
 export default function Home() {
-
   return (
     <div>
       <FirstDiv />
@@ -26,5 +29,5 @@ export default function Home() {
       <ThirdDiv />
       <FourthDiv />
     </div>
-  )
+  );
 }

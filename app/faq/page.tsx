@@ -1,15 +1,19 @@
-import ResendForm from "@/components/forms/ResendForm"
-import FaqForm from "@/components/forms/FaqForm"
-import { Metadata } from "next"
+import ResendForm from "@/components/forms/ResendForm";
+import FaqForm from "@/components/forms/FaqForm";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'FAQ',
-  description: '',
+  title: "Frequently Asked Questions",
+  description:
+    "Find answers to common questions about selling your house for cash. Learn how OT Home Buyers ensures a smooth process.",
   robots: {
     follow: true,
-    index: true
+    index: true,
   },
-}
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/faq/`,
+  },
+};
 
 const FAQ = () => {
   return (
@@ -28,9 +32,8 @@ const FAQ = () => {
       </div>
 
       <ResendForm />
-      
     </div>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;
